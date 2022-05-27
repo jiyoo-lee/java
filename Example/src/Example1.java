@@ -28,6 +28,6 @@ public class Example1 {
 
 		sc.close();
 
-	}
+	} /*내가 푼 것 및 풀이한 것임*/
 
 }
