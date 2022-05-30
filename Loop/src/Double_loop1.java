@@ -35,6 +35,7 @@ public class Double_loop1 {
 		 * system.out.println(discount)
 		 * int c = money -(int)( a ) //double c·Î ½áµµ µÊ 
 		 * system.out.println(c)*/
+
 		
 	}
 
