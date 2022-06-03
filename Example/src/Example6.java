@@ -1,32 +1,50 @@
+import java.util.Scanner;
 
 public class Example6 {
 
 	public static void main(String[] args) {
-		/*
-		 * 응용문제6 : 1~10까지 순차적으로 적용하는 반복문이 있습니다. 단, 1~5까지는 모든 값을 곱하고, 6~10까지는 모든 값을 더합니다.
-		 * 해당 두개의 값을 비교하여 더한 값이 큰지 곱한 값이 큰지 결과로 출력하시오
-		 * 
-		 */
-
-		int a;
-		int b = 1;
-		int c = 0;
-
-		for (a = 1; a <= 10; a++) {
-			if (a < 6) {
-				b *= a;
-			} else {
-				c += a;
-			}
-		}
-		if (b > c) {
-			System.out.println("곱한 값이 더 큽니다.");
-		} else if (b < c) {
-			System.out.println("더한 값이 더 큽니다.");
-		} else {
-			System.out.println("두 값이 같습니다.");
-		}
+		/*응용문제 :
+		 * 반복문 하나만 돌리삼
+		 * 2차배열이며, 데이터는 다음과 같습니다.
+		 * user_list : 홍길동, 이순신, 강감찬, 유관순, 세종대왕, 김유신, 계백장군
+		 * point :3000 1000 25000 19800 5750 3630 0
+		 * 프로그램 실행과 동시에, point를 검색 할 고객명을 입력하세요라고 구현하세요
+		 * 입력한 값은 별도의 class를 제작하여 해당 메소드 값으로 매개 변수를 이용하여 전달 후 해당 결과값을 출력하세요
+		 * */
+	
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("포인트 조회를 진행 할 고객명을 입력하세요.");
+		String user = sc.next();
+		
+		search sh = new search();
+		sh.point(user);
+		
+		sc.close();
+		sh = null;
 
 	}
+	
+}
+class search {
+
+public void point (String us) {
+	String members [][] = { 
+							{"홍길동","이순신","강감찬","유관순","세종대왕","김유신","계백장군"},
+							{"3000","1000","25000","19800","5750","3630","0"}
+							};
+	
+	for(int i = 0; i<members.length; i++) {
+		for(int j = 0; j<members[0].length; j++) {
+			if(members[i][j].equals(us)) {
+				System.out.println("포인트 :"+members[1][j]);
+			}
+		}
+	}
+	
+	
+	
+}
+
 
 }

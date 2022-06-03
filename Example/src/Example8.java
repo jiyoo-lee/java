@@ -1,65 +1,57 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Example8 {
 
 	public static void main(String[] args) {
-
-		/*
-		 * 응용문제 8: 사용자 패스워드는 a1234입니다. 사용자가 패스워드를 입력합니다. 단, 3회 이상 실패시 다음과 같이 출력되도록 합니다.
-		 * "패스워드 횟수 제한으로 가까운 지점에 방문하셔야 합니다." 단, 패스워드가 맞을 경우 "로그인되었습니다."라고 출력되어야 합니다.
+		/*응용문제 : 
+		 * 다음 사용자가 복권 관련 프로그램을 요청하였습니다. math.random
+		 * 사용자가 총 다섯개의 숫자를 입력하게 됩니다. 
+		 * "1~46번 사이의 숫자를 입력해주세요" : 
+		 * 사용자가 입력한 다섯개 숫자를 배열로 셍성합니다 (main에서 처리)
 		 * 
-		 */
-
-		Scanner sc = new Scanner(System.in);
-
-		int i;
-		String user;
-		String mpass = "a1234";
-
-		password: for (i = 0; i < 3; i++) {
-			System.out.println("비밀번호를 입력해주세요.");
-			user = sc.next();
-
-			if (user.equals(mpass)) {
-				System.out.println("로그인되었습니다.");
-				break password; //break란 반복문을 강제 종료할때 사용합니다.
-			}
-			if (i >= 2) {
-				System.out.println("패스워드 횟수 제한으로 가까운 지점에 방문하셔야합니다.");
-			}
-		} //for문 끝
-		sc.close();
-
-		/* fianl String pw = "a1234";
-		 * int c = 3;
-		 * Scanner sc = new Scanner(System.in);
-		  int w = 0;
-		  String msg = "패스워드를 입력해주세요."
-		  
-		  while (w < 3) {
-		  System.out.println("msg");
-		   String user_pw = sc.next();
-		   if(pw.equals(user_pw)){		     
-		    system.out.println("로그인 되었습니다.");
-		    break;
-		    }
-		    
-		    else {
-		    msg = "올바른 패스워드를 넣어주세요.";
-		    c--;
-		    if(c ==0) { 
-		    system.out. println("패스워드 횟수 제한으로 가까운 지점에 방문하셔야 합니다.");
-		    }
-		    
-		  
-		    w++;
-		  } while 문 끝
-		 
-		 */
-		
-		
-		
+		 *  외부 클래스를 이용하여 pc가 직접 당첨번호 다섯개를 랜덤으로 뽑아냅니다.
+		 *  pc가 뽑은 5개의 숫자를 배열로 생성합니다. (외부 클래스 method로)
+		 *  
+		 *  별도의 결과 method를 하나 더 생성하여 사용자가 입력한 5개의 배열 데이터와 pc가 뽑은 배열 데이터를
+		 *  해당 method로 전달하여 출력하시면 됩니다.
+		 *  단, 모든 사용하는 반복문은 무조건 do while문으로 작성하시오. 하나의 클래스에 두개의 메소드를 만들어야함(pc가 뽑는거, 사용자와 pc비교 메소드)
+		 *  사용자가 한건 a 메소드로 먼저 던진다. -> a에서 b로 던진다.
+		 * */
+		int [] selected_nums = new int [5];
+		int i = 0;
+		do {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("1~46번사이의 숫자를 입력해주세요.");
+			selected_nums[i] = sc.nextInt();
+			lottos.pc(selected_nums,i);
+			i++;
+		}while(i<=4);
 		
 	}
+}
 
+
+class lottos {
+	public static void pc (int sn[],int j) {
+		
+		int [] pcnums = new int [5];
+		int f = 0;
+		do {
+			 pcnums[f] = (int)(Math.random()*46)+1;
+			 f++;
+		}while(f<=4);
+		
+		 
+		 if(j == 4) {
+		 lottos lt = new lottos();
+		 lt.compare(sn,pcnums);
+		 }
+		
+	}
+	public void compare(int lastsn[], int last_pcnums[] ) {
+		System.out.println(Arrays.toString(lastsn));
+		System.out.println(Arrays.toString(last_pcnums));
+	}
+	
 }

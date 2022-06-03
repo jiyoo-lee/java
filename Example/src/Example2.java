@@ -1,33 +1,39 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Example2 {
 
 	public static void main(String[] args) {
-		/*
-		 * 응용문제 : 사용자가 입력한 숫자에 맞춰서 구구단이 작동되며 총합을 계산하여 짝수인지 홀수 인지 출력하시오 구구단을 입력하세요라고 메세지가
-		 * 출력되면 해당 숫자에 맞춰서 모든 결과를 더하며 더한 값에 따라 짝수인지 홀수인지 출력 해당 반복문은 for~do while까지 한가지
-		 * 선택해서 작성하세요.
-		 */
+		
+		/* 응용문제 
+		 * 배열 + 기본(클래스) 메소드 문제
+		 * product : 수박 참외 사과 배 딸기 키위 바나나 망고
+		 * 중 참외, 배,키위를 삭제했습니다.
+		 * 해당 삭제 후 배열을 다시 재리스트 하는 코드를 작성
+		 * 해당 처리사항은 별도의 메소드에서 처리가 되어야 하며 반복문은 free입니다.
+		 * */
+		
+		String product [] = {"수박","참외","사과","배","딸기","키위","바나나","망고"};
+		
+		mins(product);
+		
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("원하는 구구단을 입력하세요[결과값 및 짝수와 홀수로 알려드립니다.]");
-		int user = sc.nextInt();
-
-		int gugu;
-		int sum = 0;
-
-		for (gugu = 1; gugu < 10; gugu++) {
-			sum += gugu * user;
+	}
+	
+	
+	public static void mins (String store[]) {
+		int no = 5;
+		String [] newProduct = new String [no];
+		int idx = 0;
+		for(String p : store) {
+			if(!p.equals("참외") && !p.equals("배") && !p.equals("키위")) {
+				newProduct[idx] = p; 
+				idx++;
+			}
+			
 		}
-
-		if (sum % 2 == 0) {
-			System.out.println("결과값: " + sum + "짝수입니다.");
-		} else {
-			System.out.println("결과값: " + sum + "홀수입니다.");
-		}
-
-		sc.close();
-
+			System.out.println(Arrays.toString(newProduct));
+		
+		
 	}
 
 }

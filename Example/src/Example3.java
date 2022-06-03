@@ -1,30 +1,29 @@
-import java.util.Scanner;
-
 public class Example3 {
 
 	public static void main(String[] args) {
-
 		/*
-		 * 응용문제 : 사용자가 해당 값을 입력합니다. 단, 사용자가 2개의 숫자를 입력하되 첫번째 숫자와 두번째 숫자 범위 안에 있는 모든 숫자를
-		 * 더해서 결과 값이 나오도록 제작하시오 단, 해당 코드는 do while 문으로 작성합니다.
+		 * 배열 + 기본(클래스) 메소드 문제 product : 수박 참외 사과 배 딸기 키위 바나나 망고 moneys : 35000, 8000,
+		 * 4000, 5500, 3800, 4400, 11000, 18900 장바구니에 해당 상품을 모두 담았습니다. 단, 그중 사과와 바나나는
+		 * 제외하고 총 결제 금액을 출력하시오. 결과값은 75600
 		 * 
-		 * 예시 : 첫번째 범위 숫자는? 5 두번째 범위 숫자는? 10 범위 숫자 모든 합계는 45입니다.
 		 */
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("첫번째 범위 숫자는?");
-		int num1 = sc.nextInt();
-		System.out.println("두번째 범위 숫자는?");
-		int num2 = sc.nextInt(); //스캐너 하나로 두번 값을 받는다.
+		String product[] = { "수박", "참외", "사과", "배", "딸기", "키위", "바나나", "망고" };
+		int moneys[] = { 35000, 8000, 4000, 5500, 3800, 4400, 11000, 18900 };
+
+		mins(product, moneys);
+
+	}
+
+	public static void mins(String pd[], int cash[]) {
 		int sum = 0;
+		for (int i = 0; i < pd.length; i++) {
+			if (!pd[i].equals("사과") && !pd[i].equals("바나나")) { // 배열값에 값을 확인할때 인덱스 값 적용하기.
+				sum = sum + cash[i];
+			}
+		}
+		System.out.println("결제하실 금액: " + sum);
 
-		do {
-			sum += num1; 
-			num1++;
-		} while (num1 <= num2);
-
-		System.out.println(sum + "입니다.");
-		sc.close();
 	}
 
 }
