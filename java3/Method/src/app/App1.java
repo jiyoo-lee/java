@@ -8,7 +8,6 @@ public class App1 {
 		// 출력시켜 method11에 로드할 수 있도록 함.
 		Blue b = new Blue();
 		System.out.println(b.box());
-
 	}
 	
 	public void abox() {
