@@ -1,0 +1,23 @@
+
+오버라이드는 자식한테만
+오버로딩은 부모,자식 클래스 모두
+
+[부모]
+public void a () { }
+
+[자식]
+public void a() { } 오버라이드
+
+
+[method]
+같은 클래스에서는 같은 메소드 x
+public void  b() {}
+
+public void  b() {} 작동 x
+
+public void  b(int a) {} 작동o  
+
+public void  b(String a) {} 작동o       ->> 이름은 같아도 자료형태는 다르면 오버로딩 및 작동 ㅇㅋ 
+ ㄴ public void b(String ab) {} ->> 작동x 같은 자료형태면 작동 ㄴㄴ 오버라이드로 자식 클래스로 이동시켜서 사용
+
+public void  b(boolean a) {} 작동o
