@@ -1,39 +1,45 @@
-import java.util.Arrays;
 
 public class Example2 {
 
-	public static void main(String[] args) {
-		
-		/* 응용문제 
-		 * 배열 + 기본(클래스) 메소드 문제
-		 * product : 수박 참외 사과 배 딸기 키위 바나나 망고
-		 * 중 참외, 배,키위를 삭제했습니다.
-		 * 해당 삭제 후 배열을 다시 재리스트 하는 코드를 작성
-		 * 해당 처리사항은 별도의 메소드에서 처리가 되어야 하며 반복문은 free입니다.
-		 * */
-		
-		String product [] = {"수박","참외","사과","배","딸기","키위","바나나","망고"};
-		
-		mins(product);
-		
-
-	}
-	
-	
-	public static void mins (String store[]) {
-		int no = 5;
-		String [] newProduct = new String [no];
-		int idx = 0;
-		for(String p : store) {
-			if(!p.equals("참외") && !p.equals("배") && !p.equals("키위")) {
-				newProduct[idx] = p; 
-				idx++;
-			}
-			
+	// pc와 사용자가 비교하는 메소드
+	public String match(int pc, int user) { //getter (인수값x) return 사용
+		String msg;
+		if(pc > user) {
+			msg = "Down";
 		}
-			System.out.println(Arrays.toString(newProduct));
-		
-		
+		else if (pc < user) {
+			msg = "Up";
+		}
+		else {
+			msg = "정답입니다!";
+		}
+		return msg;
 	}
-
 }
+
+//setter(매개변수,(인수값)) return 사용 x void로 사용
+
+//setter를 사용 할 시, 코드
+
+//private int val1;
+//private int val2;
+//private String msg; -> 결과메세지
+
+//public void randomck (int pc, int user) {
+//		this.val1 = pc;
+//		this.val2 = user;
+//		if(this.val1 > this.val2 ) {
+//			this.msg = "Down";
+// 		}
+//		else if (this.val1 < this.val2) {
+//			this.msg = "Up";
+//			}
+//		else {
+//			this.msg = "정답입니다."; 				
+//		}
+//	}
+
+
+//public String result() {
+// 		return this.msg; 
+//	}

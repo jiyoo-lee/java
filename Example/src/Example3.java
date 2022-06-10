@@ -1,29 +1,33 @@
+
 public class Example3 {
 
 	public static void main(String[] args) {
-		/*
-		 * 배열 + 기본(클래스) 메소드 문제 product : 수박 참외 사과 배 딸기 키위 바나나 망고 moneys : 35000, 8000,
-		 * 4000, 5500, 3800, 4400, 11000, 18900 장바구니에 해당 상품을 모두 담았습니다. 단, 그중 사과와 바나나는
-		 * 제외하고 총 결제 금액을 출력하시오. 결과값은 75600
-		 * 
-		 */
-
-		String product[] = { "수박", "참외", "사과", "배", "딸기", "키위", "바나나", "망고" };
-		int moneys[] = { 35000, 8000, 4000, 5500, 3800, 4400, 11000, 18900 };
-
-		mins(product, moneys);
-
+		
+		Inherit2 ih2 = new Inherit2(); // 자식 클래스를 부르면 자동으로 부모 클래스도 불러진다.
+		ih2.it("홍길동", "aaa5");
+		ih2.print();
 	}
 
-	public static void mins(String pd[], int cash[]) {
-		int sum = 0;
-		for (int i = 0; i < pd.length; i++) {
-			if (!pd[i].equals("사과") && !pd[i].equals("바나나")) { // 배열값에 값을 확인할때 인덱스 값 적용하기.
-				sum = sum + cash[i];
-			}
-		}
-		System.out.println("결제하실 금액: " + sum);
+}
 
+// 클래스 -> 필드 -> 메소드 순서로 실행된다.
+
+class Inherit1 { //데이터를 받는 역할
+	private String nm; //Inherit1 클래스에서만 쓸 수 있는 메소드
+	protected String pw; //외부에서 값을 조종 할 수는 없지만 상속되어진 메소드끼리는 값을 넘겨주고 받을 수 있음.
+	public String aa; 
+	//↑ private으로 받은 부분을 Inherit2에서도 사용할 수 있도록 하기 위함
+	
+	public void it(String d1, String d2) {
+		this.nm = d1;
+		this.pw = d2;
+		this.aa = this.nm; //private 값을 넘겨주고싶으면 public에 담았다가 출력해야한다.
 	}
+}
 
+class Inherit2 extends Inherit1 { //데이터 출력 하는 역할
+	
+	public void print() {
+		System.out.println(this.aa +" "+ this.pw);		
+	}
 }
