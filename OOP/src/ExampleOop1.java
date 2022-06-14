@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ExampleOop1 {
 
@@ -10,31 +11,32 @@ public class ExampleOop1 {
 		  배열은 abstract에서 사용합니다. 메인은 호출만 합니당.
 		 * */
 		
-		add ad = new add();
-		ad.adder();
-		ad.sender();
+		AddArrays ad = new AddArrays();
 		
 	}
 }
 
-abstract class send {
-	
-	protected int[] numbers = {6,13,22,9,12,64,32,47,39};
+abstract class SendArrays {
+
 	public abstract void sender(); // 데이터를 가져오게 하는 추상화 메소드 
 }
 
-class add extends send {
+
+class AddArrays extends SendArrays {
 	
-	protected int sum;
+	private int[] numbers;
 	
-	public void adder() { // 더해주는 메소드
-		for(int i = 0; i < this.numbers.length; i++) {
-			this.sum += this.numbers[i];
+	public AddArrays() {
+		this.numbers = new int[] {6,13,22,9,12,64,32,47,39};
+		this.sender();
 		}
-	}
 	
 	@Override
-	public void sender() { // 오버라이드 추상화 메소드 
-		System.out.println(this.sum);
+	public void sender() {
+		int sum = 0;
+		for(int i = 0; i<numbers.length; i++) {
+			sum += numbers[i];
+			}
+		System.out.println("총합계: "+sum);
 	}
 }

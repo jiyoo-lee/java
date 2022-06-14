@@ -25,12 +25,10 @@ public class Awt1 {
 		btn.setBounds(40,40,100,30);
 		closebtn.setBounds(160,40,100,30);
 		
-		
 		//object를 frame에 적용하게 됩니다. 
 		fr.add(msg);
 		fr.add(btn);
 		fr.add(closebtn);
-		
 		
 		//addActionListener(버튼에만 적용됩니다.) : 이벤트 메소드 단, THIS 사용 절대 안됨
 		closebtn.addActionListener(new ActionListener() {//모든 버튼은 ACTION을 쓴다. new ActionListener() : Override method 자동생성
