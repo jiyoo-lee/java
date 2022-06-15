@@ -3,11 +3,11 @@ package List1;
 public class List7Homework {
 
 	public static void main(String[] args) {
-		/* ¼÷Á¦ : 
-		 * ArrayList ¶Ç´Â LinkedList µÑ Áß¿¡ ¿øÇÏ´Â ¸Ş¼Òµå¸¦ ±¸ÇöÇÏ½Ã¸é µË´Ï´Ù.
-		 * 2Â÷¹è¿­ ÇüÅÂÀÔ´Ï´Ù.
-		 * ÇØ´ç µ¥ÀÌÅÍ °ªÀ» ¸ğµÎ ´õÇÏ¿© Â¦¼öÀÎÁö È¦¼öÀÎÁö¸¦ È®ÀÎÇÏ½Ã¿À.
-		 * °á°ú : ÃÑ ÇÕÀº 361ÀÌ°í È¦¼ö ÀÔ´Ï´Ù. ·Î Ãâ·ÂµÇ°Ô ÇÏ½Ã¿À.
+		/* ìˆ™ì œ : 
+		 * ArrayList ë˜ëŠ” LinkedList ë‘˜ ì¤‘ì— ì›í•˜ëŠ” ë©”ì†Œë“œë¥¼ êµ¬í˜„í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
+		 * 2ì°¨ë°°ì—´ í˜•íƒœì…ë‹ˆë‹¤.
+		 * í•´ë‹¹ ë°ì´í„° ê°’ì„ ëª¨ë‘ ë”í•˜ì—¬ ì§ìˆ˜ì¸ì§€ í™€ìˆ˜ì¸ì§€ë¥¼ í™•ì¸í•˜ì‹œì˜¤.
+		 * ê²°ê³¼ : ì´ í•©ì€ 361ì´ê³  í™€ìˆ˜ ì…ë‹ˆë‹¤. ë¡œ ì¶œë ¥ë˜ê²Œ í•˜ì‹œì˜¤.
 		 * */
 		
 		Integer[][] datas = {
@@ -16,6 +16,23 @@ public class List7Homework {
 							};
 		
 		
+		ArrayList<Integer> odd = new ArrayList<>();
+
+		for (int i = 0; i < datas.length; i++) {
+			for (int j = 0; j < datas[i].length; j++) {
+				odd.add(datas[i][j]);
+			}
+		}
+		
+		int sum = 0;
+		for (int i = 0; i < odd.size(); i++) {
+				sum += odd.get(i);
+			}
+		if (sum % 2 == 0) {
+			System.out.println("ì´í•© " + sum + " ì§ìˆ˜ì…ë‹ˆë‹¤.");
+		} else {
+			System.out.println("ì´í•© " + sum + " í™€ìˆ˜ì…ë‹ˆë‹¤.");
+		}
 		
 
 	}
