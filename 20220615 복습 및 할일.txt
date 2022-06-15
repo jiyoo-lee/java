@@ -1,0 +1,13 @@
+20220615 오늘할일 및 복습
+
+1. list, ArraysList 및 add, get, remove, size
+2. int 배열은 
+ArrayList<Integer> num 
+= new ArrayList<>(Arrays.asList(배열이름));
+3. List로 배열 출력 및 반복문 사용해서 출력 
+4. object로 문자,숫자 배열 섞어서 추가 및 숫자의 합만 출력하기
+5. 2차배열 arraylist 
+6. awt
+7. 시험범위(인터페이스 try catch까지...ㅋ...) 
+
+팀프로젝트: 3명이 한조 [4시간] 
