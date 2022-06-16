@@ -1,59 +1,77 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Class4 {
 
 	public static void main(String[] args) {
-	
-		Member mb = new Member(); 
-		// 객체 : Member mb : 인스턴스 new Member(); : 메모리에 인스턴스명을 생성하여 사용 할 수 있도록 함.
-		
-		mb.user_age = 33;
-		System.out.println(mb.user_age);
-		int total = 25 * mb.user_agree; //user_agree는 class밖에서는 고정되어있으나 해당 class안에서 변경 가능
-		System.out.println(total);
-		
-		final int agree = mb.user_agree; //Member인스턴스를 필드값을 로드함 ->agree라는 필드 상수값을 전달시킨다.
-		mb.user_agree = 80; //메모리에 등록된 필드명에 해당되는 값을 변경함.
-		System.out.println(mb.user_agree); // 다른 클래스에서 변화하는대로 필드값이 보여진다.
-		System.out.println(agree); // 값은 변경해도 상수선언을 했기때문에 고정값으로 있다.
-		
-		
-		/* 일반 클래스 메소드 부분
-		 * 일반 클래스 메소드 사용시 별도의 객체 및 인스턴스를 만들 필요가 없습니다.
-		 * 왜? static 자체가 메모리 인스턴스를 사용한다는 뜻이기때문입니다. (메인뿐만 아니라 다른 클래스에도 쓸수있음)
-		 */
-		
-		/* 응용예시 
-		 * 클래스 25000 -> 메인 final 25000 등록
-		 * 10% 할인쿠폰 적용하는 상황 -> 메모리에 필드값으로 전달
-		 * 변경된 값을 메모리에 전달해서 다음페이지엔 적용된 값을 적용할수있게 한다.
+		/*
+		 * 배열 데이터 : 홍길동 , 이순신 , 유관순
+		 * 세개의 데이터가 있습니다. 
+		 * 메인 클래스에서 문자를 하나 전송합니다. 
+		 * 단, 문자가 null로 보낼 수도 있으며 배열 데이터와 관계 없는 강감찬 이라고 보낼 수도 있습니다.
+		 * 외부 클래스명 : data_list
+		 * 추상 클래스명 : v_constructor
+		 * 외부 클래스 안 내부 클래스 명: check입니다.
+		 * 
+		 * [결과형태]
+		 * 메인 클래스에서 강감찬을 적용 할 경우 
+		 * 내부 클래스에서 "해당사용자는 가입자가 아닙니다"라고 출력
+		 * 메인 클래스에서 이순신 적용
+		 * 내부 : 해당 사용자가 검색되었습니다.
+		 * 단, Arraylist로 배열을 로드 하세요.
 		 * */
 		
-		//Member.member_event();
-		//mb.meber_event();    //위에 선언을 해서 필드선언 과 필드값 등이 있어야 
+		data_list dl = new data_list();
+		dl.array(null);	
+	}
+}
+
+abstract class v_constructor {
+	
+	public abstract void array(String name);
+	
 	}
 
-}
+class data_list extends v_constructor { //추상 클래스 extends
+	
+	String name;
 
-class Member {    //클래스
-	 String user_name;
-	 int user_age;
-	 int user_level; 	// 변수 필드명(user_level)을 생성 
-	 int user_agree = 6;	//변수 필드명에 필드값(1)을 선언.
-	 public static void member_event() { 
-	 coupon.events(); //클래스에 대한 메소드를 바로 호출가능 단, events라는 메소드에 변수 필드 및 변수 필드값을 class에 선언하게 되면 
-	 				// 그때는 객체+인스턴스를 생성해야만 로드가 됩니다.
-	 }
-}
-
-/* 하나의 Project 중 서로 다른 pck라도 한번 사용한 Class명은 다른 곳에서 
- * 사용하실 수 없습니다.
- * */
-
-
-class coupon {
-	public static void events( ) {
-		int cp = 30;
-		System.out.println(cp);
+	@Override
+	public void array(String name) {
 		
+		if(name == null) {
+			System.out.println("사용자 이름을 입력하셔야합니다.");
+		}
+		else {
+			this.name = name;  //이름에 숫자를 적을수도 있으니 그럴때 try catch로 이용해서 써보기 	
+			check ck = new check();	// 외부에서 내부로 바로 보내기 
+			ck.db();
+		}
+	}
+	
+	class check{	// 부모 클래스에서 받은 값을 자식 클래스로 이관 
+		String data_list[]; // 필드에 배열을 받는 객체 생성
+		ArrayList<String> ar = null;  // arraylist util을 필드에 객체 생성
+		String name = data_list.this.name;
+		
+		public void db() {
+			//해당 필드에 있는 Arryalist를 인스턴스로 적용함 
+			this.data_list = new String[] {"홍길동","이순신","유관순"};
+			this.ar = new ArrayList<>(Arrays.asList(data_list)); //this로 값 넘겨줌 
+			this.compare(); // 최종 DB와 사용자 정보를 비교하는 메소드 
+			}
+		public void compare () { 
+			boolean ak = false; // 결과 확인작업 
+			
+			for(int i = 0; i < this.ar.size(); i++) {
+				if(this.name.equals(ar.get(i))) {
+					System.out.println("해당 사용자가 있습니다.");
+					ak = true;
+				}
+			}
+			if(!ak) {
+				System.out.println("가입된 사용자가 아닙니다.");
+			}
+		}
 	}
 }

@@ -1,0 +1,20 @@
+20220616 할일 및 복습
+
+6/24 금요일 시험~~~오후에~~~~
+(총 3문제를 내서 
+1번 -> 20점 :20분 
+2번 -> 30점 :35분
+3번 -> 20점 :25분  
+남은 시간 : 15분정도(1~3 수정 시간)
+
+총 70점 만점  
+
+1. 다음주 금요일 가방 들고오기..(spring책....)
+2. 중첩클래스와 this, 지역변수, 전역변수 구분
+3. 중첩 클래스 + Arraylist로 값 넘기고 받아오기  해보기ㅋ
+4. 중복체크하는 awt 해보기
+
+http://mekeyace.dothome.co.kr/gui.txt 가서 주소 복사후
+help -> install new software -> add 가서 location에 주소 복사
+
+http://mekeyace.dothome.co.kr/test.pdf -> awt 문제 확인 
