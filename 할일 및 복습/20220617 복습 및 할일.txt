@@ -1,0 +1,21 @@
+20220617 할일 및 복습
+
+데이터 주소 : http://mekeyace.dothome.co.kr/example2_db.txt
+2차배열 형태 : http://mekeyace.dothome.co.kr/Arraylist.txt
+경력증명서 발급
+문자열에 값있는지 확인할때는 indexOf
+배열 값은 contains
+
+
+1. 다음주 금요일 시험~~ 
+Awt6 문제와 연관 있는데
+인증번호 횟수 제한 있어서 그거 수정해야하는 문제 낼거임
+
+2. example 및 awt 문제 풀어보기 함
+
+3. 인터페이스 응용 정확하게 모름 공부해야함
+
+4. 시험 인터페이스, timelaps, try-catch,arraylist,linkedlist
+collections.sort등등...
+
+5. swing 깔기
