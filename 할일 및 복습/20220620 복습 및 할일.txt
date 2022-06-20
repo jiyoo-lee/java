@@ -1,0 +1,18 @@
+202206020 오늘 할일 및 복습
+
+다음 시험 7월 셋째주에 봄...ㅋ......
+
+1. 인터페이스
+2. getter setter
+3. try catch
+4. map, HashMap(일반 배열을 hashmap에 넣어서 출력하는 법)
+5. wrapper class
+6. Swing으로 나중에 만들거 : 예약시스템 
+음식종류, 회원종류, 셀렉문 출력문
+라벨에 최종 출력........
+
+Java I/O 기반 프로세서(이미지,파일,json,xml,영상) 
+InputStream 가져오는거 
+OutputStream 출력
+
+ 
