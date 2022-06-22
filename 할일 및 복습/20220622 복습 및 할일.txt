@@ -1,0 +1,8 @@
+20220622 복습 및 할일
+
+1. FileReader 및 Scanner
+2. string 과 new string 차이
+3. exception 문제 풀이
+4.buffer로 값가져와서 읽기 및 배열리스트에 값 넣기
+5. movie data = http://mekeyace.dothome.ck.kr/movie_db.txt
+-> 응용문제

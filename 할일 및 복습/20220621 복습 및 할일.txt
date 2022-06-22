@@ -1,0 +1,14 @@
+20220621 복습 및 할일
+
+1.exception, try -catch - fianlly
+
+catch 안에 캐치를 써서 exception을 쓸수 있다.
+
+2. File 이클립스로 로드시 try - catch를 써서 예외처리 후
+작업 실행
+
+3. JDK -> 개선사항 정보 ? JEP가 개선되어서 나왔다.
+JAVA + Python = Jython(파이썬에 자바 구현)
+JEP = JAVA + Python + interpreter(라이브러리)
+
+JAVA 19(Virtual Thread)
