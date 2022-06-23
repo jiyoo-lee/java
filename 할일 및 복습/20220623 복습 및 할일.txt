@@ -1,0 +1,12 @@
+20220623 할일 및 복습
+
+우먼스9999 : 애플워치 줄질
+
+1. inputstream, outpustream 
+2. 숙제 있음 http://mekeyace.dothome.co.kr/info.txt
+3.  연습문제 http://mekeyace.dothome.co.kr/test1.txt
+
+
+
+
+
