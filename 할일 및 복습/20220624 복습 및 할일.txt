@@ -1,0 +1,11 @@
+20220624 복습 및 할일
+
+1. b조 김진수, 이경훈
+7/22 시험 
+1 - 데이터로드(데이터 가공) : 데이터베이스
+2 - 앞단 입력값 받기 
+3 - 뒷단 결과값을 받아서 최종부분 체크해서 출력
+문제 데이터:
+http://mekeyace.dothome.co.kr/javalast_test.pdf
+http://mekeyace.dothome.co.kr/vs.exe
+My - linux 시스템 MySQL.com visual c++깔아야함
