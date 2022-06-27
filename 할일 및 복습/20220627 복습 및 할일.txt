@@ -1,0 +1,68 @@
+20220627 할일 및 복습
+
+1. FileChannel, RandomAccessFile, tranferTo
+
+2. IO 입력
+- FileReader : 한자씩 읽어온다 
+- Files (문서,경로 가져오기) : 한자씩 읽어온다
+- Scanner.next()
+- InputStream(최상위) - FileInputStream 
+- 보조 : BufferedReader : 라인으로 읽는다
+
+3. IO 출력
+- FileWriter : 한자씩 출력한다
+- Scanner.nextLine()
+- OutputStream (최상위) - FileOutputStream
+- 보조: bufferedWriter : 라인으로 출력한다.
+
+[ 그 외의 출력방식 리스트 저장 후 출력하는 형태]
+ArrayList 
+List
+ArrayList<String> as = Files.readAllLines(Paths.get("경로"));
+
+[중요사항 - Stream 사용시]
+1. 한번 사용시 종료 됨
+2. Stream은 byte[] 배열로 처리하게 됩니다.
+ -파일 전체 크기 다 사용
+ -파일 전체 크기를 쪼개서 사용
+문자 - String a = new String(배열이름,"UTF8");
+
+
+4. 네트워크 (java6번 폴더)
+
+Server          +        Client 
+접속하는 공간 / 클라이언트(접속자)
+
+P2P = Client to Client (서로 서버이자 클라이언트)
+ex. 토렌트, 
+온라인 채팅 : client가 서버로 접속(로그인) 후 채팅
+1:1 -> p2p형태
+
+IP : 네트워크 주소 
+Ipv4 : 0~255까지의 정수 4파트 0.0.0.0 (211.255.1.16)
+
+(===========사용불가==============)
+192.168.0.1 gateway / 192.168.0.255 (보안접속 페이지)
+2~254까지 쓸 수 있음 
+같은 IP사용불가
+abc.co.kr(DNS Domain name server)
+구매를 해야하고 서버주소 대신 알기쉽게 도메인으로 설정한것
+
+Ipv6 : 128비트 단위로 설정 0:0:0:0:0:0:0:0 8자리 주소 -> 0110:C002:D010: 16진수
+보안성이 ipv4보다 좋다.
+
+5. TCP(연결 프로토콜)/UDP (User data protocol 사용자 데이터 프로토콜) 
+-udp는 전송 속도가 느림(1:1일 경우 매우 빠름)  
+-TCP는 빠름 
+
+/*PORT : 
+ 80 : 웹 web (http://) 
+ 21 : FTP
+ 22 : SSH Share port -Linux, Unix
+ 23 : TELNET  - Window 
+ 443 : web (https://)
+ 25 : SMTP - MAIL SERVER - 메일 보내기 
+ 110 : POP3 (메일 받기) - 문자,파일 받기 PC에 다운받기 (단점 : 피씨에서 지우면 다 사라짐) (서버와 비동기화)
+ 143 : IMAP (메일 받기) - 문자, 파일 받기 (피씨에서 지워도 서버에 남아있어서 다시 사용가능)(서버와 동기화)
+ 
+savefrom.net
