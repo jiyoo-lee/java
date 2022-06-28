@@ -1,0 +1,11 @@
+
+cmd 모드 접속
+cd.. 최상위로 가는 경로
+cd \ : 한번에 최상위로 가는 경로
+cd jdk tab키 누르기 (자동으로 읽어줌)
+cd bin
+java "C:\java6\Net\src\net6.java" 이런식으로 실행시켜주기
+
+서버-클라이언트 접속 시키기 
+taskkill /f /pid 포트번호 (포트도 종료시키기)
+채팅 입력받기 1:1
