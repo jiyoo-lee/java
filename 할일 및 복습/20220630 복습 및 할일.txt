@@ -1,0 +1,139 @@
+********20220630*********
+USB 들고오기
+
+DataBase (DB) - SQL(관계형)
+
+https://velog.io/@taeha7b/basic-of-database
+1.MSSQL (Window) - 1433(port)
+2. MySQL (LINUX, UNIX) - 3306
+3. Maria DB(Linux, Unix) - program DB connect Mysql과 다름 -3306
+4. Oracle (Window, Linux) - 최대 특징 여러 port 사용 할수 있음 -free
+5. Cubrid(Naver 자체제작) - MySQL + Oracle -free 
+ex: 회계
+
+파생 DB
+※ 별도 DB(NoSQL) (비관계형) - JSON, XML 
+최대특징: Join(Join은 두 개의 table들을 연결(join)해서
+두 table의 레코드를 읽어 들이고 싶을 때 사용) 불가 
+-Mongo DB
+-Arango DB 
+-Couch DB
+
+database -  
+table - 하나의 그룹
+
+ㅡMYSQL shell mode
+
+\connect root(사용자이름)@localhost:3306
+\sql
+mysql - shell mode 전환됨
+
+show databases; 현재 sql에서 사용하는 DB전체 리스트를 보여줍니다.
+
+use 데이터베이스 이름 : 사용하고자하는 DB를 선택할때 이용되는 명령어 
+show tables : 해당 데이터베이스 안에 테이블의 목록을 보고싶을 경우 사용하는 명령어
+
+desc 테이블 타입 볼수있음
+
+[table 생성] ※ 사용할 DB를 선정하지않고 테이블을 생성할수는 없습니다. 
+create table 생성 할 테이블이름(
+[자료 입력]
+필드명 자료형(범위) 부가옵션,
+필드명 자료형(범위) 부가옵션,
+필드명 자료형(범위) 부가옵션
+);
+
+create tables product(
+pnm varchar(200) not null,
+pcode varchar(200) not null,
+pmoney int(10) not null,
+psales char(10)
+);
+
+
+insert into product (pnm,pcode,pmoney,psales) values ("키위","1","3000","50%");
+insert into product (pnm,pcode,pmoney,psales) values ("딸기","2","4000","10%");
+insert into product (pnm,pcode,pmoney,psales) values ("바나나","3","3800","5%");
+insert into product (pnm,pcode,pmoney,psales) values ("수박","4","26000","21%");
+
+
+[테이블 필드명 확인]
+desc 테이블명;
+
+[테이블 안 data확인] select
+select * from 테이블명 : 필드안의 값을 확인하기 위한 명령어
+* : 모든 필드를 지칭
+select + 특정필드 + from 테이블명 : 해당 필드에 있는 모든 값만 출력을 한다.
+select 필드명1,필드명2,필드명3 frome 테이블명 : 다중 필드에 있는 모든 값만 출력을 한다
+select * from 테이블명 where 필드명 ='데이터값' : 해당 데이터에 대한 정보만 출력을 한다.
+select * from 테이블명 where int필드명 (>,<,=,>=,<=) 값 : 지정값보다 큰 필드 정보만 출력한다.
+(필드 속성이 무조건 숫자) ※ ==는 아님!
+select * from 테이블명 where 필드명 like 데이터값 : 글 포함된 정보만 추출한다. 
+like 해당 단어가 포함된 값 '%단어', '단어%', '%단어%'
+select count(*) from 테이블명; : 총 데이터의 갯수를 알 수있다.
+select * from 테이블명 limit 인덱스번호,출력할데이터갯수(범위)
+
+※ int는 값을 입력했어도 필드 확인시엔 보이지않는다.
+※ 테이블 생성시 필드(컬럼)과 함께 생성을 무조건 하게됩니다.
+
+[db 삭제]
+drop database 데이터베이스명 : db를 삭제하는 명령어
+단, 삭제시 db안에 있는 모든 table,file,data 모두 삭제
+
+create databasess 생성할 db명 : 새로운 DB를 만들때 사용하는 명령어 
+
+varchar = String
+char = char
+
+[테이블 형식 복사]
+create table 신규 테이블명 like 원본 테이블명; : 원본 테이블명의 형식을 복사
+
+[테이블 안 데이터 모두 삭제]ㅔ
+delete from 테이블명; -> 테이블 안에 있는 데이터를 삭제
+delete from 테이블명 where pnm like '레코드값' limit 지울 갯수; (기준은 밑에서 위로)
+delete from 테이블명 where 필드명 like %데이터값%; 
+delete from 테이블명 where 필드명 like %데이터값% limit 숫자 : 중복되었을경우
+중복값 갯수만큼 삭제할때 이용됩니다.
+
+[테이블 자체를 삭제]
+drop table 테이블 명  ->테이블 필드,데이터 모두 삭제
+
+
+
+
+[Create] 생성(database, table,field)
+create table 테이블명 : 테이블 생성
+create database  데이터베이스명 : db생성
+create table 사본테이블명 like 원본테이블명 : 테이블에 있는 모든 필드값을 복사하여 
+생성 됨
+[select] 검색
+[delete] 삭제
+[update] 수정
+
+[insert into] 데이터 입력
+insert into 테이블명(모든 필드이름) values (데이터값을 작성) - values 데이터 입력시 숫자,문자 구분함
+(숫자는 ""없이 쓰기)
+* 중요 DB 
+mySQL , information_schema
+
+
+mysql 구문 실행순서
+select 5
+from 1
+where 2
+group by 3
+having 4
+order by 6
+
+
+[DataBase에 접속 할 사용자 추가 및 해당 사용자에게 DB 권한을 적용]
+1.root로 접속하여 mysql이라는 db를 사용합니다.
+2. create user 아이디@localhost identified by "패스워드";
+3. insert into db values ("localhost","db명","사용자아이디","y","y",.....(db테이블에 대한 row 갯수만큼 입력))
+4. exit 종료
+5. 제어판-서비스-mysql80 다시시작
+6.mysql 8.0 command line을 copy해서 속성 -> -u만 놔두고 생성한 아이디로 변경
+7. 헷갈리지않게 파일명도 아이디로 추가해주기
+
+key는 테이블, 레코드 복사해도 복사안됨 (사전에 메모)
+
