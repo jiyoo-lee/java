@@ -11,7 +11,7 @@ https://velog.io/@taeha7b/basic-of-database
 5. Cubrid(Naver 자체제작) - MySQL + Oracle -free 
 ex: 회계
 
-파생 DB
+파생 DBs
 ※ 별도 DB(NoSQL) (비관계형) - JSON, XML 
 최대특징: Join(Join은 두 개의 table들을 연결(join)해서
 두 table의 레코드를 읽어 들이고 싶을 때 사용) 불가 
@@ -71,6 +71,7 @@ select * from 테이블명 where int필드명 (>,<,=,>=,<=) 값 : 지정값보�
 select * from 테이블명 where 필드명 like 데이터값 : 글 포함된 정보만 추출한다. 
 like 해당 단어가 포함된 값 '%단어', '단어%', '%단어%'
 select count(*) from 테이블명; : 총 데이터의 갯수를 알 수있다.
+※ count(*)를 붙여서 써야한다
 select * from 테이블명 limit 인덱스번호,출력할데이터갯수(범위)
 
 ※ int는 값을 입력했어도 필드 확인시엔 보이지않는다.
@@ -129,6 +130,9 @@ order by 6
 [DataBase에 접속 할 사용자 추가 및 해당 사용자에게 DB 권한을 적용]
 1.root로 접속하여 mysql이라는 db를 사용합니다.
 2. create user 아이디@localhost identified by "패스워드";
+2-1. use mysql -> select * from user; -> desc db; (3개, 나머지 y)
+insert into db values("localhost","sms","admin","y","y","y","y","y","y","y","y","y","y","y","y","y","y","y","y","y","y","y");
+trigger, excute, lock_table, (drop->n로 쓰면 drop명령어를 사용하지 못함) 
 3. insert into db values ("localhost","db명","사용자아이디","y","y",.....(db테이블에 대한 row 갯수만큼 입력))
 4. exit 종료
 5. 제어판-서비스-mysql80 다시시작
