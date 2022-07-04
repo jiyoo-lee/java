@@ -216,7 +216,7 @@ pdong varchar(100) not null,
 primary key(pidx)
 );
 
-
+mysql + mariadb 는 명령어가 같음
 
 [백업] -> 백업 폴더 하나 만들어서 사용
 mysqldump -u 사용자명 -p 데이터베이스 이름 > 경로/데이터베이스명.sql
