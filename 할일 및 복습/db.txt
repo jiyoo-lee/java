@@ -1,0 +1,48 @@
+create table event(
+eidx int(8) not null auto_increment,                         
+eid char(200) not null,			
+epass varchar(250) not null,		
+etel char(11) not null,	
+e_email char(100)not null,									
+ecode char(10) null,		
+esoft tinytext not null,
+primary key(eidx,eid)				
+);
+
+mysql> alter table modify esoft enum('window','office','xbox') not null;
+
+create table board(
+ntitle varchar(250) not null,
+nwriter char(50) not null,
+npass varchar(200) not null,
+econtent text not null,
+primary key(nwriter,npass),
+unique key(nwriter)
+);
+
+create table free (
+fidx int(8) not null auto_increment,
+fsubject varchar(220) not null,
+fwriter char(80) not null,
+fpass char(20) not null,
+ftext text not null,
+fcount int(6) not null default '0',
+fdate date not null default '0001-01-01',
+primary key(fidx,fwriter),
+unique key(fidx)
+);
+
+우편번호,시도,시군구,도로명,동명
+
+create table address_seoul(
+aidx int(8) not null auto_increment,
+apost int(5) not null,
+a_area char(8) not null,
+a_area2 char(8) not null,
+a_road varchar(10) not null,
+a_town varchar(30) not null,
+primary key(aidx,apost),
+unique key(aidx)
+);
+
+
