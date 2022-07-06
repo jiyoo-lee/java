@@ -1,0 +1,48 @@
+20220706 할일 및 복습
+
+1.제어판 > window defender > 고급설정 > 인바운드 규칙 > 새규칙 - 포트 > 특정 로컬포트 1433을 입력
+> 연결허용 > 다음 계속
+
+2. c > window > sysWOW > SQL serverManager15.msc 실행 
+
+3. sql server 서비스 모두 실행 
+4. sql server 네트워크 구성 > sqlexpress에 대한 프로토콜 모두 사용 
+ -tcp/ip > ip주소 탭 > ipall > tcp 동적 포트 0을 지움 > tcp 포트 1433으로 입력
+
+5. mssql 실행 후 ip주소 적성 뒤 연결
+
+mssql : pwdencrypt('a123456')
+
+insert into mrp_members values ('hong','a123456','이순신','1234567890','lee@gmail.com','01012345678','','2022-07-06 12:45:11');
+
+insert into mrp_members values ('kang',pwdencrypt('a123456'),'강감찬','1234567890','lee@gmail.com','01012345678','','2022-07-06 12:45:11');
+
+
+create~~~코드만 저장해서 \있는건 다 지우기 
+auto_increment 지우기
+char -> nchar
+
+[excel db를 임시 table로 생성시 절대 자동 증가값을 생성하면 안됨]
+identity 임시 table에 생성금지
+
+복사 할 table에는 identity를 생성하는 것이 원칙 
+xls -> mssql converting 
+xls 파일명과 테이블명 같아야 함 
+test1.xls test1
+※ test1 
+
+
+/*응용문제 : 교무실,행정실 전화번호 및 팩스 번호가 없는 data는 삭제*/
+
+mssql은 where 조건 = 대신 is으로 적어서 실행
+
+select * from school2 where stel1 is null and stel2 is null and stel3 is null; 값먼저 확인후
+delete from school where sgyomu is null and sadmin is null and sfax is null; null값 삭제
+is는 null 일때만 쓴다.
+
+
+/*응용문제 : 공립 학교가 몇개가 있는지를 확인합니다.*/
+
+/*응용문제: 유치원이 몇개 있는지 확인*/
+
+/* 응용문제 : 남구에 학교가 몇개가 있는지 확인*/
