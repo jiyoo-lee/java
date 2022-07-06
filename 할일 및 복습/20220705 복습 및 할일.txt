@@ -1,0 +1,62 @@
+20220705 할일 및 복습
+
+1. db 조인 (다중)
+
+
+1. order by desc내림, asc오름
+2. select sum(필드명) from 테이블명: 필드속성 int(숫자)
+select * from 테이블명 order by 필드명 desc : 내림차순
+select * from 테이블명 order by 필드명 asc : 오름차순
+3. select *,sum(p_price) from pay : 전체
+4. select sum(p_price).pcard from pay
+해당 같은 이름을 가진 그룹별로 각각 갑슬 합친 데이터를 출력하는 sql command
+5. select 레코드명, sum(레코드명) as 변수명 from 테이블명 group by 레코드명;
+6. group by 필드명 : 해당 필드값이 같은 거끼리 모아서 추출함
+select 필드명 count(필드명) as 필드명 group by 필드명
+
+7.join은 6개까지 할 수 있다.
+
+ex)
+1. 회원가입 테이블 
+2. 적립금 테이블
+3. 장바구니 테이블 
+4. 결제한 테이블
+5. 상품 테이블 
+6. 비회원 테이블
+
+[Join]
+select a.별명 명칭.필드명
+from 기준 테이블 
+as a별명 명칭 
+join 비교테이블 
+as b별명 명칭
+on a별명 명칭.필드명 = b별명명칭.조인 할 필드명
+where a.별명 명칭.필드명 = 조건
+group by
+order by 
+
+mysql -> 8.0.29 뒤가 홀수가 정식버전
+5.7.37버전이 안정적
+mysql 중고책 5버전 보면서 공부하면 좋음
+
+mysql> select m.mid, sum(pt.ptprice)as usedpoints,(select sum(pkprice) from payok where pkid='kihyun_top')as usedmoney from points as pt join members as m on mid 
+= ptid where m.mname = '조기현' and pt.ptagree ='N';
+
+Table join 형태
+select 필드명 from 테이블명 as 가상의 필드명 join 테이블명 as a가상의 테이블명 on a가상의 테이블명.필드명 = b가상의 테이블명.필드명 
+where 가상의 테이블명.필드명 = '조건' 
+
+[port]
+http : 80
+https : 443
+FTP : 21
+SSH: 22
+SMTP(메일발송) : 25
+POP3(pc 다운로드) : 110
+IMAP (PC 다운로드 + 서버에 Mail 저장) : 143
+MySQL : 3306
+MSSQL : 1433  
+
+
+mssql 깔고 default 값으로 진행
+mssql은 자릿수 안적고 진행 (ex: midx int not null )
