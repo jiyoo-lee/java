@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> HTML1.0 1일차 기본태그 배우기 </title>
+</head>
+<body>
+<!--img 태그 이미지를 가져올때 사용합니다. -->
+<!-- 속성 src (경로src) width(가로크기) height(세로크기) -->
+<img src="https://i.pinimg.com/736x/81/3d/39/813d3997687c5b5d13a5e3421df8101b.jpg">
+<br>
+<br>
+<img src = "./puppy.jpg" width = "100" height = "100"><br><br> <!-- 상대경로 -->
+
+<!-- 절대경로 : http,https로 시작하여 적용하는 URL 주소 -->
+<!-- 상대경로 : ./ ../를 이용하여 디렉토리별로 경로주소를 설정함 -->
+<br>
+<br>
+<a href="http://www.naver.com">네이버</a>
+<!-- a tag 페이지 이동 -->
+<!-- href(속성) : 경로 상대경로 절대경로 모두 사용가능 -->
+
+<br>
+<a href="./index1.html">이전페이지</a>
+<br><br>
+<a href= "http://www.nate.com">
+<font color ="red">네이트닷컴</font>
+</a>
+<!-- a 태그 사용시 a 태그 안에 하위 태그를 적용해야 합니다. -->
+<br>
+
+<!-- target 속성
+웹페이지 이동을 어떤 형식으로 할 것인지 정함 
+_self: 현재 오픈 된 페이지에서 이동
+_blank 새로운 탭에서 페이지 이동
+_top 모바일에서 최상위 탭으로 이동
+_new 모바일에서 신규탭으로 이동 -->
+
+<a href= "http://www.google.com" target = "_self">구글</a><br> 
+<!-- 바로 해당 페이지에서 열림 target default 값-->
+<a href= "http://www.daum.net" target = "_black">다음</a><br>
+<!-- 신규페이지, 트래픽이 증가 --> 
+<a href= "http://www.nate.com" target = "_top">네이트</a><br>
+<!-- 해당 페이지 (모바일에서 최상위 창에 로드) -->
+<a href= "http://www.nate.com" target = "_new">네이트2</a><br>
+<!-- 신규 페이지(모바일창에서 새로운 창 로드) -->
+</body>
+</html>
