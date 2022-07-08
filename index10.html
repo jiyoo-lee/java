@@ -1,0 +1,76 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HTML 2일차 HTML 4.0 + CSS 1.0</title>
+</head>
+<body>
+	<!-- ul : 목차 리스트 tag li 갯수 만큼 목차 리스트가 추가 됩니다. ㆍ모양은 디스크라고 부르면 됩니다. -->
+	<ul>
+
+		<li>공지사항1</li>
+
+		<li>공지사항2</li>
+
+		<li>공지사항3</li>
+
+		<li>공지사항4</li>
+
+		<li>공지사항5</li>
+
+
+	</ul>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- ol은 목차 리스트 태그이며 숫자로 리스트 목차를 구분합니다. ex)1.공지사항 2. 공지사항2 3. 공지사항3 -->
+	<ol>
+		<li>공지사항1</li>
+
+		<li>공지사항2</li>
+
+		<li>공지사항3</li>
+
+		<li>공지사항4</li>
+
+		<li>공지사항5</li>
+
+	</ol>
+
+	<br>
+	<!-- span은 공간 오브젝트 태그입니다. 
+	
+	border-style: solid (외곽선)
+	border-width: 선 두께
+	border-color: 선 색상
+	
+	span은 width 및 height를 적용하기 위해서는 display를 무조건 사용해야합니다.
+	-->
+
+	<span
+		style="border-style: solid; border-width: 1px; border-color: black;">
+		홍길동 고객님 </span>
+	<br>
+	<br>
+	<!-- display : 출력형태를 구분, block -> 출력 none ->미출력 
+	-->
+	<span
+		style="border: 1px solid blue; width: 500px; height: 50px; display: block;">
+		홍길동 고객님 </span>
+	<br>
+	<!-- div : display를 사용하지 않아도 사이즈 변경 가능, span과 동일한 레이아웃 tag입니다.-->
+	<div style = "border: 1px solid red; width: 1000px; height: 100px">
+
+	</div>
+	
+<!-- strike : html 4.0 취소선 
+
+
+-->	
+<strike style="color:red">5,500원</strike>	
+<br>
+<!-- 시맨틱 마크업 -->
+<s style="color:red">22,000,000원</s>		
+
+</body>
+</html>

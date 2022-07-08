@@ -1,0 +1,82 @@
+<html lang = "kr">
+<head>
+<meta charset="UTF-8">
+<title>HTML 2일차</title>
+<style>
+body{margin:0; padding:0;}
+
+	.olcss{
+		width:150px;
+		list-style: none;
+		margin:0px;
+		padding:0px;
+		border: 1px solid red;
+	}
+	
+	.licss{
+		width: 110px;
+		height: 30px;
+		border: 1px solid black;
+		/*padding-left: 20px;*/
+		padding: 0px 0px 0px 40px; /*시계 방향 width 값이 늘어나므로 조정해야함*/
+	}
+	
+	.licss:hover{ /*마우스를 가져다댔을때 배경색이 바뀌는 것 속성값*/
+		background-color: grey;
+	}
+	
+	/*부모tag가 width가 없을 경우는 자동적으로 100% 적용 됨(빈 공간까지 모두 사용)
+	width는 li 크기만큼 부모tag를 적용해주면 됨 */
+
+	.olcss2{
+		width:760px;
+		height: 32px;
+		list-style: none;
+		margin:0px;
+		padding:0px;
+		border: 1px solid red;
+		margin-top: 10px;
+	}
+	
+	
+	.licss2{
+		width: 150px;
+		height: 30px;
+		border: 1px solid black;
+		float: left;
+	}
+	
+	.licss2:hover{
+		background-color: pink;
+	}
+
+/*자식tag에서 float를 써서 부모태그에서 height, width 값이 사라진 상태
+-> 자식갯수에 맞춰서 부모태그를 늘려줘야함 (border 값까지 계산해야함)*/
+
+</style>
+</head>
+<body>
+<ol class = "olcss"> <!-- 부모 tag -->
+
+<li class = "licss">대메뉴1</li> <!-- 자식 tag -->
+<li class = "licss">대메뉴2</li>
+<li class = "licss">대메뉴3</li>
+<li class = "licss">대메뉴4</li>
+<li class = "licss">대메뉴5</li>
+
+</ol>
+
+<ol class = "olcss2">
+
+<li class = "licss2">
+<input type ="submit" value = "대메뉴1" style = "width:150px; height:30px; "></li>
+<li class = "licss2">대메뉴2</li>
+<li class = "licss2">대메뉴3</li>
+<li class = "licss2">대메뉴4</li>
+<li class = "licss2">대메뉴5</li>
+
+</ol>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html lang ="ko">
+<head>
+<meta charset="utf-8">
+<title>HTML 2일차 HTML 4.0 + CSS 2.0</title>
+<style>
+/*  .(class), #(id) 기호입니다.  */
+
+	.box{ 
+	width:100px; 
+	height : 100px;
+	background-color:orange;
+	}
+	
+	#box{
+	width:100px;
+	height:100px;
+	background-color:pink;
+	}
+	
+	.color1{
+	width:500px;
+	background-color:black;
+	}
+	
+	.box3{
+	width:100px;
+	height: 100px;
+	background-color: orange;
+	border-radius:100px;  /*border-radius는 타원형으로 만들때 사용하는 속성*/
+	}
+	
+	.btn{
+	width:200px;
+	height: 40px;
+	background-color: skyblue;
+	border-radius: 40px;
+	text-align: center; /*text-align : left, center, right 정렬을 설정할때 사용*/
+	line-height: 20px; /*  line-height: 한 라인에 대한 높이값(줄간격) 한줄일때 가운데 정렬이 가능한 함수*/
+	}
+	
+</style>
+<!-- class, id 
+id는 일회성만 사용이 가능하다.  
+class(style sheet 사용하기 위한 속성) id(javascript), name(bacekend에게 전송하는 속성) -->
+</head>
+<body>
+<div class="btn">회원가입<br>테스트</div>
+<div class ="box3"></div>
+<div style ="width:100px; height:100px; background-color:blue;"> </div>
+<div class="box"></div>
+<div id="box"></div>
+<div class="box color1"></div>
+<!-- class는 여러가지 값을 가져올 수 있습니다. id는 한가지 즉 중복을 허용하지 않습니다. -->
+</body>
+</html>

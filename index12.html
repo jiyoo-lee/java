@@ -1,0 +1,94 @@
+<html lang = "ko">
+<head>
+<meta charset="utf-8">
+<title>HTML 2일차 4.0 + CSS 2.0</title>
+<style>
+/* 태그에 그대로 적용시 . 또는 #으로 사용하지 않음*/
+body { margin:0; padding:0;} /* 안쪽(padding) 여백과 바깥(margin) 여백을 모두 제거(0사용시) */
+
+	.box{
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	}
+	
+	.color1{
+	background-color: orange;
+	margin-top : 20px;
+	}
+	
+	.color2{
+	background-color: pink;
+	margin-left: 20px;
+	}
+	
+	.color3{
+	background-color: purple;
+	margin-left: -20px;
+	}
+	
+	.color4{
+		background-color: green;
+		margin-top: -20px;
+	}
+	
+	.bigbox{
+		width: 50px;
+		height: 50px;
+		background-color: yellow;
+		padding-left:450px;
+		padding-top: 450px;
+	}
+	/*padding(안쪽 여백)은 늘어나면 패딩만큼 오브젝트의 크기가 커짐.
+	단점은 padding 적용시 objec의 width와 height가 커짐.
+	margin은 아님 */
+	
+	.sbox{
+		width: 30px;
+		height: 30px;
+		background-color: black;
+		padding-top:20px;
+		padding-left:20px;
+	}
+	
+	.ssbox{
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	}
+	
+	/*margin : 바깥쪽 여백 left, right, bottom, top 4가지의 위치로 사용 가능
+	음수 값도 적용 가능 (음수 사용시 : 잡아 당기기 가능) 
+	가장 안쪽에 있는 오브젝트에는 margin을 쓰지않는다*/
+
+</style>
+</head>
+<body>
+	<input type = "text" value = "hong" disabled> 
+	<!-- disable은 눈에는 보이지만 백엔드로 값이 전달되지 않는다. 
+	사용예: 값을 전달은 하지않지만 보여져야할때 사용
+	※ readonly와 비슷하지만 readonly는 값 전달 가능-->
+	<input type="checkbox" disabled>자동 로그인 <!--사용자에게 서비스를 제공하지 못할때 사용
+	 -------------------------------------------예시-->
+	<input type="checkbox" disabled>신한카드[시스템 점검 중]
+	<input type="checkbox">현대카드
+	<br>
+	<br>
+	<input type = "radio" name ="card" checked>신한카드
+	<input type = "radio" name = "card">국민카드
+	<input type = "radio" name = "card" disabled>하나카드[시스템 점검]	
+	<br>
+	<br>
+	<div class = "box">박스1</div>
+	<div class = "box color1">박스2</div>
+	<div class = "box color2">박스3</div>
+	<div class = "box color3">박스4</div>
+	<div class = "box color4">박스5</div>
+	
+	<div class = "bigbox">
+	<div class = "sbox"> 
+	<div class = "ssbox"></div>
+	</div>
+	</div>
+</body>
+</html>

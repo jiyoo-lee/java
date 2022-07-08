@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 연습문제</title>
+</head>
+<body>
+
+
+<!-- tabindex : 커서가 tab키를 누를 경우 이동하는 순서를 정할때 사용하는 속성 값  -->
+<form method ="post" action = "http://naver.com">
+	<table border="1" cellpading="0" cellspacting="0" width = "550" height="120">
+
+		<tr>
+			<td width="100">아이디</td>
+			<td align ="center">
+			<input type="text" style = "width:280px; height:30px;" tabindex="1"> </td>
+			<td rowspan="2" align="center" width="150"><input type="submit"
+				value="로그인" style = "width:130px; height:70px; "tabindex="3"> </td>
+		</tr>
+
+		<tr>
+			<td>패스워드</td>
+			<td><input type="password" style = "width:280px; height:30px;" tabindex="2"></td>
+		</tr>
+
+		<tr>
+			<td colspan="3"><input type="checkbox">자동 로그인</td>
+		</tr>
+
+	</table>
+</form>
+
+</body>
+</html>

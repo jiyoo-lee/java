@@ -1,0 +1,92 @@
+
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 2일차 Padding, margin</title>
+<style>
+body{padding: 0; margin: 0;}
+
+	.box1 {
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+	/*margin-left:10px;
+	margin-top: 10px;
+	margin-bottom: 10px;*/
+	margin:10px 10px 10px 10px; 
+	/*한번에 상하좌우로 오브젝트 여백을 만드는 함수
+	margin:10px 10px 10px 10px; = margin = 10px;
+	시계방향으로 여백을 추가하는 함수 12시 3시 6시 9시 방향 기준
+	*/
+	float:left;
+	/*float:left는 왼쪽기준으로 right는 오른쪽 기준 center : 가운데 정렬*/
+	}
+	/*margin-botton : 자신을 기준으로 아래로 다른 오브젝트를 미는 함수*/
+	
+	.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	float:left;
+	margin:10px 0px 10px 0px;
+	/*기준으로 왼쪽으로 오브젝트를 옮길 수 있다. 하지만 옆에 정렬하려는 오브젝트 옆에 써줘야함*/
+	}
+	
+	.box3 {
+	width: 100px;
+	height: 100px;
+	background-color: gray; clear:both;
+	margin:0px 10px 10px 10px;
+	float:left;
+	}
+	/*float 사용시 clear:both 사용하면 위치 초기화 됨*/
+	
+	.box4{
+	width: 100px;
+	height: 100px;
+	background-color: skyblue;
+	float:left;
+	margin: 0px 0px 10px 0px;
+	}
+	
+	.ulcss {
+	list-style: none; 
+	/*list-style 사용 후 여백도 제거 해주어야한다.(margin,padding 사용)*/
+	margin :0px;
+	padding : 0px;
+	clear: both;
+	float:right; /*부모는 최상위 body*/
+	margin-right: 80px; /* 통째로 움직을때 부모태그에 써줘야함*/
+	}
+	
+	.licss {
+	width: 200px;
+	height: 30px;
+	border:1px solid black;
+	float: left; /* 부모 기준으로 왼쪽부터  float은 부모태그를 기준으로 함
+	자식,부모 태그 모두에 설정을 해주어야한다.*/
+	text-align: center;
+	line-height: 30px;
+	}
+	/*가운데 정렬*/
+	
+	
+</style>
+</head>
+<body>
+<div class = "box1"></div>
+<div class = "box2"></div>
+<div class = "box3"></div>
+<div class = "box4"></div>
+
+<ul class = "ulcss">
+<li class="licss">대메뉴1</li>
+<li class="licss">대메뉴2</li>
+<li class="licss">대메뉴3</li>
+<li class="licss">대메뉴4</li>
+<li class="licss">대메뉴5</li>
+
+</ul>
+
+</body>
+</html>
