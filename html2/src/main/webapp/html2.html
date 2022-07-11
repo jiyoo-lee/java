@@ -1,0 +1,77 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 CSS2.0 응용</title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	border-radius: 0 50px 50px 0;
+}
+
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: lightgreen;
+	border-radius: 50px 0 50px 50px;
+}
+
+.button {
+	width: 200px;
+	height: 30px;
+	background-color: orange;
+	color: black;
+	border: 0px;
+	font-weight: bold;
+}
+
+.mid {
+	width: 200px;
+	height: 30px;
+	border: 0px;
+	border-bottom: 1px solid black;
+}
+
+.search {
+	width: 586px;
+	height: 57px;
+	background-image: url("./search (1).png");
+	position: relative;
+}
+
+.s {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	outline : none;
+	text-indent : 5px;
+}
+
+/*border-radius : 왼쪽상단,오른쪽상단,오른쪽하단,왼쪽하단*/
+</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<input type="button" value="회원가입" class=button>
+	<input type="text" class=mid>
+	<br>
+	<br>
+	<form name = "f" id="f" method = "get" action ="https://search.naver.com/search.naver">
+	<div class="search">
+		<input type="text" name = "query" class="s">
+	</div>
+	</form>
+</body>
+</html>

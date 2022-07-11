@@ -1,0 +1,117 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>CSS 2.0 응용 배너 디스크</title>
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.disc {
+	width: 250px;
+	height: 20px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.licss {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 20px;
+	float: left;
+	margin-left: 5px;
+}
+
+.red {
+	background-color: red;
+	border: 1px solid black;
+}
+
+.menu_ico{
+	width: 95px;
+	height: 95px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+	float: left;
+	overflow: hidden;
+	
+	/*overflow : hidden은 해당 오브젝트 사이즈에 부분만 보여지도록 하는 속성*/
+}
+
+/*background-position은 background-image 적용시 사용함 x축,y축
+background-position-x
+background-position-y  이렇게 한 축만 변경도 가능하다.*/
+
+.img1{
+background-image: url("./menus.png;")
+}
+
+.img1:hover{
+background-color: grey;
+}
+
+.img2{
+background-image: url("./menus.png");
+background-position: -96px 0; 
+}
+
+.img2:hover{
+background-color: grey;
+}
+.img3{
+background-image: url("./menus.png");
+background-position: -192px 0; 
+}
+.img3:hover{
+background-color: grey;
+}
+.img4{
+background-image: url("./menus.png");
+background-position: -288px 0; 
+}
+.img4:hover{
+background-color: grey;
+}
+.img5{
+background-image: url("./menus.png");
+background-position: -384px 0; 
+}
+.img5:hover{
+background-color: grey;
+}
+
+
+</style>
+
+<!-- Color : red,orange. 
+RGB color(0,0,0)->BLACK ~RGB(255,255,255) ->WHITE 
+#fffff ~ #00000;(0~f) hashcode (전체가 같은 코드이면 세자리만 입력해도 됨 ex: #ccc)
+-->
+</head>
+<body>
+	<ol class="disc">
+	
+		<li class="licss red"></li>
+		<li class="licss"></li>
+		<li class="licss"></li>
+		<li class="licss"></li>
+		
+	</ol>
+<br><br>
+<div class = "menu_ico"><img src="./home.png"></div>
+<div class = "menu_ico"><img src="./key.png"></div>
+<div class = "menu_ico"><img src="./mail.png"></div>
+<div class = "menu_ico"><img src="./help.png"></div>
+<div class = "menu_ico"><img src="./settings.png"></div>
+<br><br><br>
+
+<div class = "menu_ico img1" style = "clear:both;"></div>
+<div class = "menu_ico img2"></div>
+<div class = "menu_ico img3"></div>
+<div class = "menu_ico img4"></div>
+<div class = "menu_ico img5"></div>
+</body>
+</html>

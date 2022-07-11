@@ -1,0 +1,81 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua=compatible" content="ie=edge, chrome=1">
+<title>HTML4.1 사이트전체 레이아웃</title>
+<STYLE>
+body {
+	padding: 0;
+	margin: 0;
+}
+span{ display: block; }
+
+ul,ol{ list-style: none; margin: 0; padding: 0;} /*base 코드 여러번 쓸거를 미리 선언*/
+
+	.top{
+		width: 1200px;
+		height: 80px;
+		background-color: #00125f;
+		margin: 0 auto; /*position이 absolute이면 작동이 되지않음*/
+		position: relative;
+	}
+
+	.top_span{
+		height: 40px;
+	}
+	
+	
+	.top_ol{
+	height: 40px;
+	width: 300px;
+	float:right;
+	}
+
+	.top_li{
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	.menu{
+	width: 240px;
+	height: 50px;
+	background-color: white;
+	border: 1px solid black;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	}
+	
+</STYLE>
+</head>
+<body>
+	<!-- 최상단(로그인,고객센터 파트 -->
+	<div class="top">
+		<span class="top_span"> 
+		<ol class = "top_ol">
+		<li class="top_li">Home</li>
+		<li class="top_li">LOGIN</li>
+		<li class="top_li">MEMBER</li>
+		<li class="top_li">CUSTOMER</li>
+		</ol>
+		</span>
+	<div class= "menu"></div>
+	</div>
+	<!-- 상단 메뉴 파트 -->
+
+	<!-- 배너파트 -->
+	
+	<div class = "banner"></div>
+	<!-- 상품 출력 파트 -->
+	<div class = "product"></div>
+	<!--  -->
+	<div class = ""> </div>
+</body>
+</html>
