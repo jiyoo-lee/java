@@ -1,64 +1,102 @@
-<html>
+<html lang="ko">
 <head>
 <meta charset="utf-8">
-<title> HTML 2.0 1일차 </title>
+<title>응용문제</title>
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.box1 {
+	width: 330px;
+	height: 90px;
+	border: 2px solid black;
+	position: relative;
+}
+
+.select1 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 0px;
+}
+
+
+.select2 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 0px;
+	left: 110px;
+}
+
+.select3 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 0px;
+	left: 220px;
+}
+
+.select4 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 45px;
+	left: 0px;
+}
+
+.select5 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 45px;
+	left: 110px;
+}
+
+.select6 {
+	width: 110px;
+	height: 45px;
+	position: absolute;
+	top: 45px;
+	left: 220px;
+}
+</style>
 </head>
 <body>
-  
-<!-- <iframe src = "./index2.html" frameborder = "0" width = "100%" height = "900"></iframe>-->
-<!-- iframe : 외부 페이지를 현재 페이지로 load하여 출력하는 태그입니다. 
-width : 100% > 브라우저 가로크기를 모두 사용한다는 뜻
-frameborder : iframe시 외각선을 지울때 사용합니다.
--->
 
-<!-- semantic markup 
-table : 테이블을 생성 할 때 제작
-tr : 한줄
-td : 한칸
-1.width, height를 table에 적용하는 방식
-2.tr에 height를 사용하여 td의 높이를 모두 맞춤(단, width는 사용하지 않습니다.)
-3.td에는 width를 사용하나 첫번째 tr에 해당 되는 td에만 width을 적용 합니다.
-표의 칸,줄이 같아야 함 -->
+	<div class="box1"></div>
 
-<table border = "1" width = "500" height = "120">
-<tr height  = "40">
-<td>123</td>
-<td width="100">123</td>
-<td width="100">123</td>
-</tr>
-
-<tr>
-<td>123</td>
-<td>123</td>
-<td>123</td>
-</tr>
-</table>
-<br>
-
-<!-- colspan 칸과 칸을 합칠때 사용합니다. 숫자는 무조건 2부터 시작합니다. -->
-<!-- rowspan 세로 칸을 합칠 때 사용합니다.숫자는 무조건 2부터 시작합니다. -->
-<!-- align : left,right,centr : 표안에서 텍스트 또는 이미지 위치 조절 -->
-<!--  web은 기본이 left 정렬 -->
-<table border = "1" height = "90" align = "center"> <!-- table align 화면 가운데  -->
-
-<tr align = "center"> <!-- tr,td: align 칸 내용이 위치가 변함 -->
-<td width = "200" colspan = "2">1,2</td>
-<td width = "100">3</td>
-<td width = "100" align = "left">4</td>
-</tr> 
-
-<tr>
-<td colspan = "3" align = "center">5,6,7</td>
-<td rowspan = "2" >8,12</td>
-</tr>
-
-<tr>
-<td>9</td>
-<td>10</td>
-<td>11</td>
-</tr>
-
-</table>
-
+	<div class="select1">
+		<a href="https://www.gmarket.co.kr/">
+		 <img src="./logo_quick_01.png">
+		</a>
+	</div>
+	<div class="select2">
+		<a href="http://www.auction.co.kr/">
+		 <img src="./logo_quick_02.png">
+		</a>
+	</div>
+	<div class="select3">
+		<a href="http://www.halfclub.com/#!/main"> 
+		<img src="./logo_quick_03.png">
+		</a>
+	</div>
+	<div class="select4">
+		<a href="https://www.11st.co.kr/main">
+		 <img src="./logo_quick_04.png">
+		</a>
+	</div>
+	<div class="select5">
+		<a href="https://front.wemakeprice.com/main">
+		 <img src="./logo_quick_05.png">
+		</a>
+	</div>
+	<div class="select6">
+		<a href="https://www.coupang.com/"> 
+		<img src="./logo_quick_06.png">
+		</a>
+	</div>
 </body>
 </html>

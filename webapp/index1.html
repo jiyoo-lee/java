@@ -1,23 +1,87 @@
-<html><!-- html 시작 -->
-<head> <!-- head : js,meta,link 태그가 적용됨 엔진을 로드하는 파트  -->
-<meta charset="UTF-8"> <!-- 언어셋: EUC_KR(한국어전용) EUC_JP(일본어) EUC_EN(영어) -->
-<title>HTML1.0 1일차 </title> <!-- 브라우져 탭 이름 -->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 HTML4.0</title>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+}
+
+.a {
+	background-color: orange;
+	position: static; /*margin으로만 움직임*/
+}
+
+.b {
+	background-color: pink;
+	position: relative; /*해당 객체만 움직일 수 있는 tag relative margin 사용가능 */
+	left: 100%; 
+	margin-left: -100px;
+}
+
+.c {
+	background-color: grey;
+}
+
+.d {
+	background-color: black;
+	position: absolute; 
+	right: 0px;
+}
+
+.popup{
+
+width: 600px;
+height: 600px;
+background-color: yellowgreen;
+display: block;
+position: relative;
+}
+
+.close{
+width: 50px;
+height: 50px;
+background-color: black;
+position: absolute;
+left: 100%;
+color: white;
+font-size: 25px;
+font-weight: bold;
+text-align: center;
+line-height: 50px;
+}
+
+/*자식이 absolute일 경우 부모는 무조건 relative로 세팅해야함*/
+/*positon : 오브젝트의 성격을 변화시킬때 사용하는 속성
+static(고정, default값), 
+relative(중간형태,margin,top,left,right,bottom]),
+absolute(자유분방함) */
+
+</style>
 </head>
-<!-- br: 한줄내림 -->
 <body>
-홍길동 Hi ~~~~<br> <!-- <br>은 그냥 태그 -->
-<b>이순신</b> <!--<b> </b> bold의 약자 --><br>
-<b>유관순님</b> <u> 환영합니다.</u> <!--<u></u> under line -->
-적립금은 <i>5000원</i>입니다. <!-- <i></i> italic의 약자<기울기> -->
-<!-- 이미지,동영상  -->
-<br>
-웹 사이트 현재 <font color ="red" size = "7"><b>공사중</b></font>입니다.
-<!-- font 태그 : 문자 크기 폰트체 색상 등 변경을 사용 -->
-<!--  color(속성) 색상, size(크기) 1~7 -->
-<br><br><br>
-<font color = "red"><b>[긴급공지]</b></font> 현대카드 결제가 현재 <u>시스템 장애로</u> 수정 중입니다.
-<br> <br> <br>
-홍 길&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동 
-<!-- &nbsp; : 띄어쓰기(특수 문자,공란을 만들때 사용합니다.) 스페이스바는 한칸 밖에 못띄움-->
+
+	<div class="a"></div>
+	<div class="b"></div>
+	<div class="c"></div>
+	<div class="d"></div>
+	
+	
+<span class = "popup" id="popup">
+<div class = "close" onclick ="abc()">X</div>
+</span>
+
 </body>
+<script>
+function abc() {
+	document.getElementById("popup").style.display="none";
+	}
+</script>
+
 </html>

@@ -1,41 +1,117 @@
-<html>
+<html lang="ko">
 <head>
-<meta charset="euc_kr">
-<title> HTML 2.0 1ÀÏÂ÷ Table(HTML 2.0) </title>
+<meta charset="utf-8">
+<title>CSS 2.0 ì‘ìš© ë°°ë„ˆ ë””ìŠ¤í¬</title>
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.disc {
+	width: 250px;
+	height: 20px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.licss {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 20px;
+	float: left;
+	margin-left: 5px;
+}
+
+.red {
+	background-color: red;
+	border: 1px solid black;
+}
+
+.menu_ico{
+	width: 95px;
+	height: 95px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+	float: left;
+	overflow: hidden;
+	
+	/*overflow : hiddenì€ í•´ë‹¹ ì˜¤ë¸Œì íŠ¸ ì‚¬ì´ì¦ˆì— ë¶€ë¶„ë§Œ ë³´ì—¬ì§€ë„ë¡ í•˜ëŠ” ì†ì„±*/
+}
+
+/*background-positionì€ background-image ì ìš©ì‹œ ì‚¬ìš©í•¨ xì¶•,yì¶•
+background-position-x
+background-position-y  ì´ë ‡ê²Œ í•œ ì¶•ë§Œ ë³€ê²½ë„ ê°€ëŠ¥í•˜ë‹¤.*/
+
+.img1{
+background-image: url("./menus.png;")
+}
+
+.img1:hover{
+background-color: grey;
+}
+
+.img2{
+background-image: url("./menus.png");
+background-position: -96px 0; 
+}
+
+.img2:hover{
+background-color: grey;
+}
+.img3{
+background-image: url("./menus.png");
+background-position: -192px 0; 
+}
+.img3:hover{
+background-color: grey;
+}
+.img4{
+background-image: url("./menus.png");
+background-position: -288px 0; 
+}
+.img4:hover{
+background-color: grey;
+}
+.img5{
+background-image: url("./menus.png");
+background-position: -384px 0; 
+}
+.img5:hover{
+background-color: grey;
+}
+
+
+</style>
+
+<!-- Color : red,orange. 
+RGB color(0,0,0)->BLACK ~RGB(255,255,255) ->WHITE 
+#fffff ~ #00000;(0~f) hashcode (ì „ì²´ê°€ ê°™ì€ ì½”ë“œì´ë©´ ì„¸ìë¦¬ë§Œ ì…ë ¥í•´ë„ ë¨ ex: #ccc)
+-->
 </head>
 <body>
+	<ol class="disc">
+	
+		<li class="licss red"></li>
+		<li class="licss"></li>
+		<li class="licss"></li>
+		<li class="licss"></li>
+		
+	</ol>
+<br><br>
+<div class = "menu_ico"><img src="./home.png"></div>
+<div class = "menu_ico"><img src="./key.png"></div>
+<div class = "menu_ico"><img src="./mail.png"></div>
+<div class = "menu_ico"><img src="./help.png"></div>
+<div class = "menu_ico"><img src="./settings.png"></div>
+<br><br><br>
 
-<!-- bg color : background color(¹è°æ»ö) -->
-<!-- cellsapcing : ¹Ù±ùÂÊ ¿©¹é 
- cellpadding : ¾ÈÂÊ ¿©¹é -->
-<table border = "1" width = "450" height = "120" bgcolor = "pink" cellspacing ="0" cellpadding = "0">
-
-<tr>
-<td width = "100"><font size = "2"><b>¾ÆÀÌµğ</b></font></td>
-<td></td>
-<td width = "100" rowspan = "2" bgcolor ="orange"> 
-<a href = "http://coupang.com" target = "_blank">
-<img src = "./puppy.jpg" width = "100" height = "60">
-</td>
-</a>
-</tr>
-
-<tr>
-<td><font size = "2"><b>ÆĞ½º¿öµå</b></font></td>
-<td></td>
-</tr>
-
-<tr bgcolor = "grey">
-<td colspan = "3" align = "center"><font size = "2">¾ÆÀÌµğ ¹× ÆĞ½º¿öµå Ã£±â</font></td>
-</tr>
-
-<tr>
-<td width ="350" colspan = "2"><font size = "2">¾ÆÀÌµğ ¹× ÆĞ½º¿öµå ÀúÀå</font></td>
-<td align = "right"><font size = "2">È¸¿ø°¡ÀÔ</font></td>
-</tr>
-
-
-</table>
-
+<div class = "menu_ico img1" style = "clear:both;"></div>
+<div class = "menu_ico img2"></div>
+<div class = "menu_ico img3"></div>
+<div class = "menu_ico img4"></div>
+<div class = "menu_ico img5"></div>
 </body>
 </html>

@@ -1,0 +1,229 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua=compatible" content="ie=edge, chrome=1">
+<title>HTML4.1 사이트전체 레이아웃</title>
+<STYLE>
+body {
+	padding: 0;
+	margin: 0;
+}
+span{ display: block; }
+
+ul,ol{ list-style: none; margin: 0; padding: 0;} /*base 코드 여러번 쓸거를 미리 선언*/
+
+	.top{
+		width: 1200px;
+		height: 80px;
+		background-color: #00125f;
+		margin: 0 auto; /*position이 absolute이면 작동이 되지않음*/
+		position: relative;
+	}
+
+	.top_span{
+		height: 40px;
+	}
+	
+	
+	.top_ol{
+		height: 40px;
+		width: 300px;
+		float:right;
+	}
+
+	.top_li{
+		width: 75px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		float: left;
+		font-size: 12px;
+		font-weight: bold;
+		color: white;
+	}
+
+	/*메뉴파트*/
+
+	.menu{
+		width: 1200px;
+		height: 65px;
+		margin: 0 auto;
+		background-color: skyblue;
+		padding-top: 15px;
+		position: relative;
+	}
+	
+	.logo{
+		position: absolute;
+		width : 240px;
+		height: 50px;
+		background-color: lightgreen;
+		left: 15px;
+	}
+	
+	.main_menu{
+		position: absolute;
+		width: 600px;
+		height: 50px;
+		background-color: purple;
+		right: 15px;
+	}
+	
+	.banner{
+		position: relative;
+		width: 1200px;
+		height: 400px;
+		background-color: lavender;
+		margin: 40px auto;
+		text-align: center; 
+		clear:both;
+		/*자식 태그가 inline, inline-block일 경우 text-align:center로 화면 가운데로 정렬할 수 있다.*/
+	}
+	
+	.disk{
+		width: 15px;
+		height: 15px;
+		background-color: white;
+		border-radius: 15px;
+		float:left;
+		margin-left: 10px;
+		
+	}
+	
+	
+	.nomargin{margin-left: 0px;}
+	
+	.red{ background-color: red; /*margin-left: 45%;*/}
+	
+	
+	.disk_span{
+		display: inline-block;
+		margin: 0 auto;
+		/* inline, inline-block : span에 주로 사용하는 속성입니다. 
+		inline : 자동사이즈로 조절 줄 바꿈을 못함(width, height가 적용이 되나 line-height가 적용이 안됨
+		텍스트일 경우는 모두 적용 안됨)
+		inline-block : 자동 사이즈로 조절이 되나 줄바꿈을 하지 못함 (width, height,line-height 적용 됨)
+		*/
+		height: 15px;
+		/* margin-left: auto , margin-right: auto: 부모 태그 가로 기준으로 왼쪽과 오른쪽을 동일한 사이즈를 계산하여 적용하는 방식입니다.
+		단, position:relative 또는 static일 경우만 사용이 됩니다.*/
+		position: relative;
+		top: 370px;
+		margin-left: auto;
+		margin-right: 40px;
+	}
+	
+	/* 중요!!!!!!!!!!!!
+	margin:0 auto를 사용할 수 있는경우: position이 absoulute 아닐때
+	width값이 무조건 있어야 가능*/
+	
+	/*
+	.disk_span{
+		height: 15px;
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: 25px;
+	}*/
+	
+	
+	.product{
+		width: 1200px;
+		height: auto;
+		position: relative;
+		margin: 0 auto;
+	}
+	
+	
+	.products_details{
+		width:1200px;
+		height: auto;
+		position: absolute;
+		top: 40px;
+		margin: 0 auto;
+	}
+	
+	.detail{
+		width: 250px;
+		height: 300px;
+		background-color: black;
+		float:left;
+		margin-left: 40px;
+		margin-bottom: 40px;
+	}
+	
+	.detail:hover{
+	background-color: grey;
+	}
+	
+	.copyright{
+	width: 1200px;
+	height: 100px;
+	background-color: white;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	bottom: 0px;
+	}
+	
+	
+</STYLE>
+</head>
+<body>
+	<!-- 최상단(로그인,고객센터 파트 -->
+	<div class="top">
+		<span class="top_span"> 
+		<ol class = "top_ol">
+		<li class="top_li">HOME</li>
+		<li class="top_li">LOGIN</li>
+		<li class="top_li">MEMBER</li>
+		<li class="top_li">CUSTOMER</li>
+		</ol>
+		</span>
+		
+	<!-- 상단 메뉴 파트 -->
+	<div class= "menu">
+	
+	<span class = "Logo"></span>
+	<span class = "main_menu"></span>
+	</div>
+	</div>
+
+	<!-- 배너파트 -->
+	
+	<div class = "banner">
+	
+		<span class = "disk_span">
+		<div class = "disk nomargin red"></div>
+		<div class = "disk"></div>
+		<div class = "disk"></div>
+		<div class = "disk"></div>
+		</span>
+	</div>
+	<!-- 상품 출력 파트  ※여백공간 코드 작성시 좌우 px을 합친다는 생각으로 퍼블리싱 해야함-->
+	<div class = "product">
+		<ul class = "products_details">
+		<li class = "detail"></li>
+		<li class = "detail"></li>
+		<li class = "detail"></li>
+		<li class = "detail"></li>
+		<li class = "detail"></li>
+		<li class = "detail"></li>
+		<li class = "detail"></li>	
+		<li class = "detail"></li>	
+		<li class = "detail"></li>	
+		<li class = "detail"></li>	
+		<li class = "detail"></li>	
+		<li class = "detail"></li>	
+		</ul>
+	</div>
+	<!-- 카피라이터 파트-->
+	<div class = "copyright">
+		<span>Copyright ⓒ 1999-2022 Never Crop. All Right reserved.</span>
+		<span>회사명, 대표자명, 사업자등록번호, 통신판매번호<a href="https://ftc.go.kr/bizCommPop.do?wrkr_no=1428138153" target = "_new"></a> [사업자등록확인]</span>
+		<span>대표전화, 개인정보담당자명, 대표메일, 주소</span>
+	
+	 </div>
+</body>
+</html>

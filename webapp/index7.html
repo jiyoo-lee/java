@@ -1,15 +1,27 @@
-<html lang = "ko"> <!-- language : lang ko 한국어 위주로 만들어졌다는 뜻 -->
+<html lang = "ko">
 <head>
 <meta charset="utf-8">
-<title>HTML3.0 기본태그 3</title>
+<title>HTML 3일차 4.0</title>
+<style>
+body{padding:0; margin: 0;}
+
+</style>
 </head>
 <body>
-<input type = "text" style = "width: 200px; height:30px;">
+<!-- input type = "file"은 첨부파일 사용시 적용되는 태그 속성입니다. -->
+파일 첨부: <input type ="file"><br>
+이미지 파일첨부 : <input type="file" accept="image/png,image/jpeg, image/bmp">
 <br>
-<input type = "button" value ="login" style = width:100px; height:100px;>
-
-<!-- pixel : em,in,inch(외국) pixel(우리나라,모바일) %(mobile), vh,vw -->
-
-
+excel 파일첨부 : <input type="file" accept="application/vnd.ms-excel">
+<br>
+video 파일첨부 : <input type="file" accept="video/*">
+<br>
+pdf 파일첨부 : <input type="file" accept="pdf/*">
+<br>
+시험 다중 파일첨부 : <input type="file" multiple>
+<br>
+영상파일첨부 : <input type="file" accept = "video/mp4,mpeg,webm">
+<br>
+음악파일 첨부 <input type="file" accept = "audio/*">
 </body>
 </html>

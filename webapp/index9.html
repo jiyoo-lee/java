@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- HTML5를 쓴다는 뜻. -->
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content = "IE=edge, chrome=1">
+<!-- viewport를 사용한 이유는 모바일 웹에서도 사용할수 있도록 하기 위함 -->
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>HTML 5.0 CSS 3.0 4일차...</title>
+<!-- link는 css파일을 로드하기 위해서 사용된 tag -->
+<link rel="stylesheet" type = "text/css" href="./index9.css?v=2022071201">
+
+</head>
+<body>
+<!-- label : span태그의 업그레이드 버전
+	for라는 속성 : input type 태그 속성에서 id를 이용하여 핸들링 할 수 있습니다. -->
+<label class = "box"></label>
+<input type ="checkbox" id="ck"><label for="ck">자동로그인</label>
+<br>
+<!-- markup : label은 해당 되는 글자를 누르면 체크가 되고 span은 정확하게 체크박스를 눌러야 체크가 됨 -->
+<input type ="checkbox" id="ck"><span for="ck">자동로그인</span><br>
+<input type="radio" name ="a" id = "a1"><label for ="a1">동의함</label>
+<input type="radio" name ="a" id = "a2"><label for ="a2">동의안함</label>
+<br>
+<!-- 검색엔진 option에 데이터베이스로 저장하면 이렇게 됨 -->
+<!-- text에 list라는 속성 추가됨 datalist라는 태그와 연결을 시킬 수 있음 -->
+<input type = "text" list = "search">
+<datalist id ="search"> <!-- datalist는 select의 upgrade tag입니다. -->
+	<option>JAVA</option>
+	<option>MYSQL</option>
+	<option>MSSQL</option>
+	<option>HTML</option>
+	<option>CSS</option>
+</datalist>
+</body>
+</html>

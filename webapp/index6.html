@@ -1,53 +1,111 @@
-<html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
-<title>HTML 1¿œ¬˜ HTML3.0 ±‚∫ª≈¬±◊2</title>
+<meta charset="utf-8">
+<title>ÏùëÏö©Î¨∏Ï†ú~~ Object Î™®Ïñë ÎßåÎì§Í∏∞</title>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.blue {
+	width: 320px;
+	height: 240px;
+	background-color: blue;
+	position: relative;
+	float: left;
+}
+
+.box2{
+
+width: 160px;
+height: 240px;
+background-color: red;
+position: absolute;
+right: 0px;
+}
+
+.box3{
+width: 80px;
+height: 120px;
+background-color: green;
+position: absolute;
+right: 0px;
+bottom: 0px;
+padding-left : 80px; 
+}
+
+.box4{
+width: 80px;
+height: 60px;
+background-color: yellowgreen;
+right: 0px;
+padding-top: 60px;
+}
+
+.box5{
+width: 80px;
+height: 60px;
+background-color: yellow;
+position: relative;
+}
+
+
+.box6{
+width: 50px;
+height: 60px;
+background-color:black;
+position: absolute;
+right: 0px;
+}
+
+.box7{
+width: 50px;
+height: 40px;
+background-color: purple;
+position: relative;
+}
+
+
+.box8{
+width: 20px;
+height: 40px;
+background-color: grey;
+position: absolute;
+top: 20px;
+right: 0px;
+}
+
+
+.box9{
+width: 20px;
+height: 20px;
+background-color: pink;
+position: absolute;
+right: 0px;
+top: 40px;
+}
+</style>
 </head>
 <body>
-<!-- select(∫Œ∏). option(¿⁄Ωƒ) ≈¬±◊∏¶ ªÁøÎ«œø© ªÁøÎ¿⁄∞° «—∞°¡ˆ∏¶ º±≈√ «“ ºˆ ¿÷µµ∑œ «œ¥¬ ≈¬±◊ ¿‘¥œ¥Ÿ. -->
-<select>
-<option>SKT</option>
-<option>LG</option>
-<option>KT</option>
-<option>æÀ∂„∆˘</option>
-</select>
-<br><br>
-<!-- textarea¥¬ ªÁøÎ¿⁄∞° ∏π¿∫ æÁ¿« ≈ÿΩ∫∆Æ∏¶ ¿‘∑¬«œ∞Ì¿⁄ «“ ∂ß ªÁøÎ«œ¥¬ ≈¬±◊ ¿‘¥œ¥Ÿ. 
-cols(º”º∫) : «— ¡Ÿ¥Á 50¿⁄±Ó¡ˆ ¿‘∑¬ 
-rows(º”º∫) : «—π¯ø° ∫∏ø©¡ˆ¥¬ ¡Ÿ ºˆ («ÿ¥Á ¡Ÿ ºˆ ¿ÃªÛ¿Ã µ«∏È Ω∫≈©∑—πŸ∞° ¿⁄µø¿∏∑Œ ª˝±Ë)
--->
-<textarea cols="50" rows="5">
-¿ÃøÎæ‡∞¸
 
 
+	<div class="blue">
+	<span class = "box2"></span>
+	<span class = "box3">
+	<div class = "box4">
+	<span class = "box5">
+	<div class = "box6">
+	<span class = "box7"></span>
+	<span class = "box8"></span>
+	<span class = "box9"></span>	
+	</div>
+	</span>
+	</div>
+	
+	</span>
+	</div>
+	
 
-
-
-</textarea>
-<br>
-<form method = "post" action = "http://naver.com">
-<input type= "text">
-<br>
-<input type= "checkbox">
-<br>
-<input type= "password">
-<br>
-<input type= "submit" value="¿¸º€">
-<input type= "button" value="¿¸º€2" onclick="abc()">
-<!-- abc() «‘ºˆ -->
-<!-- submit : form∞˙ ªÁøÎ¿ª ∞∞¿Ã«œ∏Á ≈¨∏Ø, enter∑Œ ¿€µø «‘ -->
-<!-- button : action πÃ¿˚øÎ form∞˙ ∞¸∞Ëæ¯¿Ã ¿€µø ∞°¥… ¥‹, enter≈∞∞° æ∆¥— ∏∂øÏΩ∫∑Œ∏∏ ¿€µø  -->
-<input type= "reset" value="√Îº“">
-</form>
-<!-- form: µ•¿Ã≈Õ∏¶ ¿¸º€«“∂ß ªÁøÎ«œ¥¬ ≈¬±◊, √Îº“±Ó¡ˆ ¥Ÿ π≠æÓº≠ ªÁøÎ«ÿæﬂ«‘
-submit : ¡¶√‚ 
-reset : ªÁøÎ¿⁄∞° ¿‘∑¬«— ∞™¿ª ∏µŒ √ ±‚»≠«‘ 
--->
 </body>
 </html>
-
-<script>
-function abc(){
-	location.href="http://nate.com";
-}
-</script>
