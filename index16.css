@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+span, label {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.box1 {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	padding-left: 50px;
+}
+
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+
+/*box-sizing: border-box : padding, border도 적용 되어짐*/
+.box3 {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+.box4 {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+	box-sizing: border-box;
+	/*border가 사용되지만 width 값을 바꿔주지 않음*/
+}
+
+/*nth-child : DOM 객체
+
+nth-of-type : NODE 객체 */
+
+.ulcss > li:nth-child(1){
+	color:red;
+}
+
+.ulcss > li:nth-child(4){
+	color:red;
+}
+
+.ulcss > li:nth-child(5){
+	color:red;
+}
+
+.olcss > li:nth-of-type(2){
+	color: blue;
+}
+
+.olcss > li:nth-of-type(3){
+	color: blue;
+}
+
+/* 돔 형태 자식 태그 순서대로 인덱스 생성*/
+
+.div1 > span:nth-child(4){
+	color: red;
+	font-weight: bold;
+}
+
+/* node (태그끼리 별도로 인덱스 번호 생성)*/
+.div2 > label:nth-of-type(1){ /*span의 갯수 순서대로 적어주어야함*/
+	color: blue;
+	font-weight: bold;
+}
+
+/*DOM*/
+
+.object1{
+		
+}
+
+.object1 > span{ /*해당 tag안에 있는 span만 적용*/
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+}
+
+
+.object1 > span:nth-child(2){
+	background-color: pink;
+}
+
+.object1 > span:nth-child(odd){ /*odd(홀수번호) even(짝수번호)*/
+	background-color: lightyellow;
+}
+
+.object2 > span, .object2 > label{ /*해당 tag안에 있는 span만 적용*/
+	width: 50px;
+	height: 50px;
+	background-color: skyblue;
+}
+
+.object2{}
+
+.object2 > span:nth-of-type(even), .object2 > label:nth-of-type(odd){
+	background-color: magenta;
+}
+

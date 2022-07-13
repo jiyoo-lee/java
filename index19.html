@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table의 신규</title>
+<style>
+
+.tablecss{
+	position: relative;
+	width: 430px;
+}
+
+.tablecss > span{
+	display :block;
+	width: inherit;
+	height: 80px;
+}
+
+.tablecss > span > table{
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.tablecss > span > table > caption {
+	position: absolute;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background-color: grey;
+	width: 430px;
+	top: 0px;
+	left:0px;
+	z-index: 1;
+}
+
+.tablecss > span > table > thead > tr{
+	width: 430px;
+	position: absolute;
+	top: 20px;
+	left: 0px; 
+	height: 25px;
+	background-color: white;
+	z-index: 1;
+}
+
+.tablecss > span > table > tbody {
+	position: relative;
+	top: 40px;
+	
+}
+
+
+.tablecss > span > table > tbody > tr > td {
+	width: 150px;
+}
+
+</style>
+</head>
+<body>
+<div class = "tablecss">
+<span>
+<table border ="1" cellpadding="0" cellspacing = "0" summary = "각 지역 별 창고현황">
+<caption>각 지역 별 창고현황</caption>
+
+<thead> <!-- 테이블 목차 제목 -->
+	<tr>
+	 	<th style = "width:150px;">서울</th>
+	 	<th style = "width:150px;">경기도</th>
+	 	<th style = "width:150px;">인천</th>
+	</tr>
+</thead>
+
+<tbody> <!-- 테이블에 대한 목차에 대한 데이터값 -->
+	<tr>
+		<td>2000</td>
+		<td>1000</td>
+		<td>800</td>
+	</tr>
+	
+	<tr>
+		<td>2000</td>
+		<td>1000</td>
+		<td>800</td>
+	</tr>
+	
+	<tr>
+		<td>2000</td>
+		<td>1000</td>
+		<td>800</td>
+	</tr>
+	
+	<tr>
+		<td>2000</td>
+		<td>1000</td>
+		<td>800</td>
+	</tr>
+</table>
+</tbody>
+
+</span>
+	</div>
+</body>
+</html>

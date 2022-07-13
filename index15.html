@@ -1,51 +1,57 @@
-<html lang = "ko">
+<!-- drop 메뉴바(슬라이드) 만들기 -->
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
-<title>HTML4.0 + CSS 2.0 2���� ���빮�� </title>
-<style>
-body{margin:0; padding:0;}
-
-	.box{
-		width: 380px;
-		height: 145;
-		border: 1px solid black;
-		border-radius: 10px;
-		padding: 0px;
-	}
-	
-	.ulcss{
-		width: 350;
-		height: 115px;
-		list-style: none;
-		margin: 0; padding: 0;
-		background-color: grey;
-		padding: 0px;
-	}
-	
-	.litcss{
-	width: 100px;
-	height: 35px;
-		
-	}
-
-	
-
-</style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML 5.0 CSS 3.0 5일차</title>
+<link rel="stylesheet" type="text/css" href="./index15.css?v=2">
 </head>
 <body>
+	<header class="header_css">
+		<div class="header_div">
+			<ul class="ul_css">
+				<li class="li_css">로그인</li>
+				<li class="li_css">회원가입</li>
+				<li class="li_css">고객센터</li>
 
-<div class = "box">
-<ul class = "ulcss">
+			</ul>
 
-<li class = "litcss"><input type = "text"></li>
-<li class = "litcss2">@</li>
-<li></li>
-
-
-
-</ul>
-</div>
-
+		</div>
+	</header>
+	<nav class="nav_css">
+		<div class="nav_div">
+			<ol class="nav_ol">
+				<li class="nav_li">대메뉴1
+					<ul class = "so_ul">
+						<li class = "so_li">소메뉴1</li>
+						<li class = "so_li">소메뉴2</li>
+						<li class = "so_li">소메뉴3</li>
+					</ul>
+				</li>
+				<li class="nav_li">대메뉴2
+				<ul class = "so_ul">
+						<li class = "so_li">소메뉴4</li>
+						<li class = "so_li">소메뉴5</li>
+						<li class = "so_li">소메뉴6</li>
+					</ul>
+				</li>
+				<li class="nav_li">대메뉴3</li>
+				<li class="nav_li">대메뉴4
+				<ul class = "so_ul">
+						<li class = "so_li">소메뉴7</li>
+						<li class = "so_li">소메뉴8</li>
+						<li class = "so_li">소메뉴9</li>
+					</ul>
+				</li>
+				<li class="nav_li">대메뉴5</li>
+				<li class="nav_li">대메뉴6</li>
+				<li class="nav_li">대메뉴7</li>
+				<li class="nav_li">대메뉴8</li>
+			</ol>
+		</div>
+	</nav>
 
 </body>
 </html>

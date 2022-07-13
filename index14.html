@@ -1,82 +1,52 @@
-<html lang = "kr">
+<!-- drop 메뉴바 만들기 -->
+<!DOCTYPE html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>HTML 2일차</title>
-<style>
-body{margin:0; padding:0;}
-
-	.olcss{
-		width:150px;
-		list-style: none;
-		margin:0px;
-		padding:0px;
-		border: 1px solid red;
-	}
-	
-	.licss{
-		width: 110px;
-		height: 30px;
-		border: 1px solid black;
-		/*padding-left: 20px;*/
-		padding: 0px 0px 0px 40px; /*시계 방향 width 값이 늘어나므로 조정해야함*/
-	}
-	
-	.licss:hover{ /*마우스를 가져다댔을때 배경색이 바뀌는 것 속성값*/
-		background-color: grey;
-	}
-	
-	/*부모tag가 width가 없을 경우는 자동적으로 100% 적용 됨(빈 공간까지 모두 사용)
-	width는 li 크기만큼 부모tag를 적용해주면 됨 */
-
-	.olcss2{
-		width:760px;
-		height: 32px;
-		list-style: none;
-		margin:0px;
-		padding:0px;
-		border: 1px solid red;
-		margin-top: 10px;
-	}
-	
-	
-	.licss2{
-		width: 150px;
-		height: 30px;
-		border: 1px solid black;
-		float: left;
-	}
-	
-	.licss2:hover{
-		background-color: pink;
-	}
-
-/*자식tag에서 float를 써서 부모태그에서 height, width 값이 사라진 상태
--> 자식갯수에 맞춰서 부모태그를 늘려줘야함 (border 값까지 계산해야함)*/
-
-</style>
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML 5.0 CSS 3.0 5일차</title>
+<link rel="stylesheet" type="text/css" href="./index14.css?v=1">
 </head>
 <body>
-<ol class = "olcss"> <!-- 부모 tag -->
+	<header class="header_css">
+		<div class="header_div">
+			<ul class="ul_css">
+				<li class="li_css">로그인</li>
+				<li class="li_css">회원가입</li>
+				<li class="li_css">고객센터</li>
 
-<li class = "licss">대메뉴1</li> <!-- 자식 tag -->
-<li class = "licss">대메뉴2</li>
-<li class = "licss">대메뉴3</li>
-<li class = "licss">대메뉴4</li>
-<li class = "licss">대메뉴5</li>
+			</ul>
 
-</ol>
-
-<ol class = "olcss2">
-
-<li class = "licss2">
-<input type ="submit" value = "대메뉴1" style = "width:150px; height:30px; "></li>
-<li class = "licss2">대메뉴2</li>
-<li class = "licss2">대메뉴3</li>
-<li class = "licss2">대메뉴4</li>
-<li class = "licss2">대메뉴5</li>
-
-</ol>
-
+		</div>
+	</header>
+	<nav class="nav_css">
+		<div class="nav_div">
+			<ol class="nav_ol">
+				<li class="nav_li">대메뉴1
+					<ul class = "so_ul">
+						<li class = "so_li">소메뉴1</li>
+						<li class = "so_li">소메뉴2</li>
+						<li class = "so_li">소메뉴3</li>
+					</ul>
+				</li>
+				<li class="nav_li">대메뉴2
+				<ul class = "so_ul">
+						<li class = "so_li">소메뉴4</li>
+						<li class = "so_li">소메뉴5</li>
+						<li class = "so_li">소메뉴6</li>
+					</ul>
+				
+				</li>
+				<li class="nav_li">대메뉴3</li>
+				<li class="nav_li">대메뉴4</li>
+				<li class="nav_li">대메뉴5</li>
+				<li class="nav_li">대메뉴6</li>
+				<li class="nav_li">대메뉴7</li>
+				<li class="nav_li">대메뉴8</li>
+			</ol>
+		</div>
+	</nav>
 
 </body>
 </html>
