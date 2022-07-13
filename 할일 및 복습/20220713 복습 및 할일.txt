@@ -1,0 +1,11 @@
+20220713 
+
+Javascript(OOP) : 엔진(x)
+Jquery : Javascript를 쉽게 사용하기 위한 도구틀
+JavaScript + ajax + node.js
+
+파일명 : .js 
+javascript version.4 -> ECMA Script -> TypeScript
+f12 -> console
+
+var (변수선언)
