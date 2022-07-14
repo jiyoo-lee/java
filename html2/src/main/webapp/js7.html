@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<!-- SETTER끼리 함수명이 같으면 안된다. 응용문제 : -->
+<title>JS getter 외부차 API JS 연결</title>
+ <script src ="http://192.168.100.215:8080/html_01/js7.js?v=2"></script> 
+<script src ="http://192.168.100.216:8080/html2/js7.js"></script> 
+<script>
+
+//function setter(a,b) {
+//	var result = getter(a,b);
+//	console.log(result);
+//}
+
+//function getter(n,m) {
+//	var cal = n * m;
+//	return cal;
+//}
+
+//setter(20,30);
+
+
+function gettera(n) {
+	var result = n/3;
+	
+	return result;
+}
+
+call1();
+
+function getterb(m) {
+	var result2 = "홍길동님 최종 결제금액은" + m +"입니다.";
+	
+	return result;
+}
+// call1();
+call2();
+
+//응용 + 배열
+
+var data = [1,2,3,4,5]; 	//숫자배열
+	console.log(data[0]);	//배열[인덱스번호]
+	
+	
+var data2 = ["홍길동","이순신","강감찬"]; // 문자배열
+	//console.log(data[1]);
+
+var ea = data2.length;
+var w = 0;
+
+while(w < ea){
+	console.log(data2[w]);
+	w++;
+}
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

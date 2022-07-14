@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS 2일차 함수 getter</title>
+<script src ="http://192.168.100.214:8080/html2/js6.js"></script>
+<script>
+
+
+
+
+	function a() { //일반함수
+		console.log("홍길동");
+	}
+	a(); //함수를 실행 단, function보다 아래에 있어야 함
+
+	function b(num) { //num -> 인수값 JS는 JAVA와 다르게 function을 먼저쓰고 실행을 밑에 함
+		console.log(num);
+	}
+
+	var z = 10;
+	b(z); //b함수에 숫자 인수값을 적용하여 호출
+
+	function i() {
+		console.log("z함수");
+		zz(); //외부 zz라는 함수로 호출함
+	}
+	function zz() {
+		console.log("환영합니다.");
+	}
+	i();
+	
+	
+	//getter setter(java)
+	//call함수(setter) return(getter) 함수(javascript) 
+	
+	
+	function setter(n) {
+		var result = getter(n); //result라는 변수로 retunr된 값을 받습니다.
+		console.log(result); // 결과 출력
+	}
+	
+	function getter(nn) { // setter 함수에서 전달 받음
+		var cal = nn + 20; // 전달 받은 값과 추가 값을 계산
+		return cal; // 최종 결과 값을 return 시킴
+	}
+	setter(5); // 함수를 호출
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
