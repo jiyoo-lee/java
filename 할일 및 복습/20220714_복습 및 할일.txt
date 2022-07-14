@@ -1,0 +1,105 @@
+
+HMTL4 -> HTML5 나온 이유?
+
+-activex 및 flash 등 다양한 응용 프로그램에서 벗어나기 위해서 html5가 나오게 되었음
+- 브라우저 별로 호환성이 있어서 실행에 문제가 있었음
+해당 APP를 이용하여 호환성을 높임
+비디오와 오디오가 추가되어 응용력을 높임
+-JS -> HTML4 동일한 Thread로 실행됨
+단 html5-> js 응용시 다양한 thread를 활용할 수 있음
+html5 plugin 없이 사용가능하며 meta를 활용 할 수 있는 범위가 넓어짐
+
+1. plugin activeX -> 64BIT(IE)
+2. 영상,소리,애니메이션
+3. 다양한 device를 활용 할 수 있음
+4. js활용 높아짐, xml과 표준언어 변경 -> XHTML
+5. 문자SET이 간단명료(script,css,meta)
+6. 코딩이 간결해짐
+7. 그래픽 (3차원)
+8. 스마트폰 GPS 장치에 접근이 가능함(배터리 소모를 줄임)
+9. 오프라인으로 실행이 가능함
+10. 확장성(WEBP, WEBM)
+
+Java servlet? java 코드안에 html이 들어감
+- UDP 처리 속도가 가장 느림
+- JAVA 재컴파일해서 HTML 사용
+- 정적인 웹페이지에서만 제공이 됨
+- 동적 페이지에서는 작동안함
+-HTTP 프로토콜 GET,POST,AJAX 데이터
+
+장점
+멀티 THREAD 지원
+한번 컴파일하면 재컴파일 안해도 됨
+
+JSP -> html -> JAVA
+- Java 기반 스크립트 언어
+- 컴파일을 할 필요가 없음
+- 동적, 정적페이지로 작성됨
+- 개발속도 빠름
+- 서버 연결 및 DB 연결 쉬워짐
+
+* MVC(module view control) -> JSP + Java servelt
+
+[setter]
+외부(setter)js 생성
+getter 함수로 값을 전달한 후 결과값을 출력
+
+[getter 입장]
+script를 먼저 로드
+<script src ="절대경로">
+<script>
+getter 함수를 생성 후 return 사용
+
+setter1 함수를 호출
+
+script를 먼저 로드
+<script src ="절대경로">
+<script>
+getter 함수를 생성 후 return 사용
+
+setter2 함수를 호출
+</script>
+
+
+
+SETTER A
+
+문제: 구구단 5단에 대한 결과값을 모두 더하여 getter로 전송 
+
+SETTER B
+
+문제: 20부터 40까지 합을 모두 더하여 getter로 전송 
+
+GETTER 
+
+결과A
+ 해당 결과값을 받아서 3으로 나눈다. 최종 계산 된 값을 setter a로 전송 
+
+결과B
+ 해당 결과값을 받아서 다음 문자와 함께 setter b로 전송
+
+
+응용문제 SETTER GETTER 
+
+data_a ["hong","park","kim","jang"]
+data_b [2500,3400,1000,6200]
+data_c ["s","v","n","n"] // s: 실버 v: vip n: 일반회원
+setter : 해당되는 아이디 값을 하나를 보냄 
+getter : 그 배열 값을 가지고 있음
+ 
+결과: kim일 경우 [결과출력] : data_a를 가지고 있는 분이 최종 출력을 합니다.
+	kim님 적립금은 1000원이며 일반회원입니다.
+
+data_b에서 출발시 var user_id라는 변수를 사용함 user_id = "kim" or "jang"
+
+1. getter user_id ="jang" -> setter1에게 전송
+2. setter1은 해당 값이 있는지 없는지를 파악, 없을 경우 해당 사용자는 가입되지 않았습니다라고 출력
+   있을 경우엔 setter1은 getter에게 index값을 보내주어야한다. getter가 받고 
+3. 해당 인덱스를 받은 getter은 해당 적립금 금액을 return 해줌
+4. 다시 setter1이 해당 값을 받고 // getter가 setter1에게 받은 값을 setter2에게도 보냄 
+5. setter2는 인덱스값을 받아서 해당 배열에 회원 레벨을 return
+6. getter은 setter2에게 받은 레벨 값을 setter1에게 return 하게 됩니다.
+7. 최종 : setter1은 id ,적립금, 레벨 return 값을 결과값처럼 출력해주면 됩니다.
+
+getter는 처음엔 setter하고 getter하고 그 다음은 setter로 그다음 getter
+ setter2에게 보내줌 -> 
