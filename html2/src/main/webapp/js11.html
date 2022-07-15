@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>JS 3일차 HTML + Javascript</title>
+<script>
+
+//function (일반함수(setter),리턴함수(getter),이벤트핸들링함수)
+
+
+function abc() { 
+	
+// 	var id = document.getElementById("mid");	//html의 id값을 가져와서 js변수로 이관함
+// 	console.log(id.value); //해당 id값을 가져오는 역할
+// 	id.readOnly = true;  //한번 입력하면 그뒤엔 변경 불가하게 하는 함수
+
+	var id = document.getElementById("mid");
+	var pw = document.getElementById("mpass");
+	if(id.value ==""){	// 해당 id값이 비어있을 경우
+		alert("아이디를 입력하세요. ");	//alert : 경고문구 
+		id.focus(); //커서를 해당 오브젝트에 적용할때 사용
+	}
+	else if (pw.value==""){
+		alert("패스워드를 입력하세요. ");
+		pw.focus();
+	}
+	else {
+// 		var f = document.getElementById("frm");
+// 		f.submit();   //id만 값이 있을때 구현하는 코드
+// submit : submit(); :  method + action 발동시키는 함수  
+		
+		//name 사용시
+		frm.submit();
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<form id ="frm" name ="frm" method = "post" action = "https://naver.com">
+<input type ="text" id ="mid" name = "mid">	<!-- id값은 중복이 있어선 안된다. -->
+<input type = "password" id = "mpass" name = "mpass">
+<input type = "button" value = "확인" onclick = "abc();"> 
+</form>
+
+<!-- onclick  속성 (button에만 사용)
+onclick 사용 하지않는 속성 : submit, reset -->
+
+</body>
+</html>

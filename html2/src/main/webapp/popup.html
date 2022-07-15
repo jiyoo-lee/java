@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "id = edge, chrome=1">
+<title>HTML JS 3일차 POPUP창 (js14.html 파일과 함께 연동)</title>
+<script>
+
+
+function popclose() {
+	self.close(); 		//자신의 창을 강제종료
+}
+
+function abc(addr) {
+	//window.opener : 부모창을 지칭함 뒷부분의 코드는 그 창에서 id값을 가져와서 addr이라는 변수에 입력하게 하는 코드
+	window.opener.document.getElementById("address").value = addr;	//자식창과 부모창 통신
+	self.close();
+}
+
+
+
+</script>
+</head>
+<body>
+<a href ="javascript:void abc('서울특별시 마포구 신촌로');">서울특별시 마포구 신촌로</a><br> <!-- void는 모든 브라우저에 실행되게 하기 위해서 입력함 -->
+<a href ="javascript:void abc('서울특별시 마포구 월드컵로');">서울특별시 마포구 월드컵로</a><br> 
+<a href ="javascript:void abc('서울특별시 영등포구 여의도동');">서울특별시 영등포구 여의도동</a><br> 
+<input type = "button" value = "창닫기" onclick = "popclose();">
+</body>
+</html>

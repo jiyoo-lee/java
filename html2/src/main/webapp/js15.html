@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta http-equiv ="X-UA-compatible" content = "id = edge, chrome=1">
+<meta charset="UTF-8">
+<title>JS 3일차 응용문제 (데이터 값 응용1)</title>
+<script>
+
+	//CORS(cross domain, cross-site) 발생 : 서로 다른 도메인 및 IP가 발생 할 경우 
+	// 발생하는 경우 : http://www.abc.co.kr , http://.abc.co.kr , http://abc.co.kr
+	//cors 서버 없이 해결법
+	
+	
+	function abc() {
+// 		window.opener.reload();
+// 		opener.location.reload();	//부모창을 새로고침할때
+		document.mid.action = "http://naver.com";
+		document.mid.submit();
+
+		//mid.location.href = "https://naver.com"; // 안됨
+		
+		/*부모창에 있는 값을 자식창으로 가져오는 사항(id로 이용..;;아님 이거)*/
+		var z = opener.document.getElementById("mid22").value;
+		alert(z);
+	}
+	
+	
+
+</script>
+</head>
+<body>
+
+<!-- 상대방 -->
+<input type ="button" value = "데이터" onclick ="abc();">
+<form name = "mid" method = "post">
+<!-- <iframe src = "http://192.168.100.214:8080/html2/js15.html"></iframe>-->
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "id = edge, chrome=1">
+<title>JS 3일차(js13.html)</title>
+<script>
+
+	function abc() {
+// 		var a = document.getElementById("mid"); 	// id(front-end)값만 있을때 구현 코드
+		if(frm.mid.value == ""){				// name(back-end)값이 있으면 구현할수 있는 코드
+			alert("중복확인 하실 아이디를 입력하세요. ");
+		}
+		else {
+			frm.submit();
+		}
+	}
+
+
+</script>
+<style>
+
+.idclass{
+	width: 200px;
+	height: 30px;
+	border : 1px solid blue;
+	box-sizing: 30px;
+}
+
+.btn{
+	width:  80px;
+	height: 30px;
+}
+
+
+</style>
+</head>
+<body>
+<!-- get방식은 브라우저에 파라미터값을 이용하여 전송하는 형태 post방식은 다름 
+단점 : 보안에 취약함(href에 경로 다 찍힘)
+-->
+<form id = "frm" name = "frm" method="get" action="./js13.html">
+<input type ="text" class = "idclass"  id = "mid" name = "mid">
+<input type ="button" value ="전송" class =  "btn" onclick = "abc();">
+</form>
+</body>
+</html>

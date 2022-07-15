@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "kor">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "id = edge, chrome=1">
+<meta name= "viewport" content ="width=device-width, initial-scale = 1.0">
+<title>Java Script 3일차 2차배열 사용법</title>
+<script>
+	
+	//체스배열[][]
+	var a = [
+		["홍길동","이순신"],
+		["hong","lee"]
+		];
+	
+	//console.log(a[1][1]);
+	
+	//키 배열
+	var b ={				//{} 배열은 key 값을 사용 할 수 있음
+		"person":["홍길동","이순신"],
+		"mid":["hong","lee"]
+	};
+	
+	//console.log(b.person[1]); //변수.키[인덱스값]
+	
+	var keys = Object.keys(b);	//키 값을 확인하는 함수 Object.keys(): 키 이름이 있는 배열을 말함
+
+	//console.log(keys.length);
+	//console.log(key);
+	var keys_value = Object.values(b); //Object.values : 키에 맞는 값 배열만 가져옴 
+	//console.log(keys_value);
+	var keys_en = Object.entries(b); //Object.entries : 배열키와 값을 동시에 가져옴 실무에서 잘 안씀;;
+	//console.log(keys_en);
+	//console.log(keys_en[0][1]);
+	//console.log(Object.keys(b.person));
+	
+
+	
+// 	for(var i = 0; i < arraylength; i++){
+// 		for(var j = 0; j < arraylength; j++){
+			//console.log(b[keys[i]][j]);	//실무에서 사용하는 코드..ㅋ
+// 		}
+// 	}
+	
+	//연관 배열
+	var c = [
+				{"mname": "홍길동","mid":"hong"},
+				{"mname": "이순신","mid":"lee"}
+			];
+	
+	//console.log(c[1]["mname"]); //특정 value 값 보기 
+	
+	//복합 배열
+	var d = [
+				{
+					"mname": ["홍길동","이순신"]
+				},
+				{
+					"mid":["hong","lee"]
+				}
+			];
+	
+	console.log(d[0]["mname"][1]);
+	console.log(d[1]["mid"][1]);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

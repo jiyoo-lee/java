@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "kor">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "id = edge, chrome=1">
+<meta name= "viewport" content ="width=device-width, initial-scale = 1.0">
+<script src ="http://192.168.100.215:8080/html_01/js16.js?v=5"></script>
+<script src ="http://192.168.100.216:8080/html2/js16.js?v=5"></script>
+<title>간편 회원가입</title>
+<script>
+
+function abc() {
+	
+	var z = document.getElementById("se").value;
+	var txt = document.getElementById("txt").value;
+	
+	if(z == ""){
+		alert("검색 할 내용을 입력해주세요.");
+	}
+	else if(z == "name"){
+		call(txt);
+	}
+	else if (z == "id"){
+		id(txt);
+	}
+}
+
+</script>
+</head>
+<body>
+
+<select name = "se" id ="se">
+	<option value ="">[검색 할 파트]</option>
+	<option value ="name">이름</option>
+	<option value ="id">아이디</option>
+</select>
+<input type = "text" id = "txt">
+<input type = "button" value = "고객검색" onclick = "abc();">
+</body>
+</html>
