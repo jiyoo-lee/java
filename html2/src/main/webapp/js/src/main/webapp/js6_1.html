@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>설문조사 받는 part + js 6.html과 함께함</title>
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<script>
+//js6.html에서 get으로 넘어온 데이터를 split을 통해서 각 배열 별로 값을 분배하여 출력되도록 함
+
+	var url = window.location.search;
+	var sp = url.split("&pollName=");
+	var pollName = sp[1];
+	var sp2 = sp[0].split("?mid=");
+	var mid = sp2[1];
+	
+	//console.log(mid + " , " + pollName);
+	
+</script>
+</head>
+<body>
+<p>설문조사 참여확인</p>
+아이디: <span id = "userid"></span> <br>
+설문조사 선택번호 : <span id = "pollnum"></span>
+</body>
+
+	<script>
+	
+	document.getElementById("userid").innerText = mid;
+	document.getElementById("pollnum").innerText = pollName;
+	
+	</script>
+</html>

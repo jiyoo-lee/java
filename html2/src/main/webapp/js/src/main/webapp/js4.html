@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE = edge, chrome = 1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS 4일차 함수 HTML 코드 생성</title>
+<script>
+	var a = 0; //전역변수(필드)
+	//innerHTML : HTML 태그 및 문자를 생성 할때 사용합니다.
+	//innerText : 문자만 생성합니다.
+	
+	// inner는 +=를 사용하지않을 경우 기존의 tag가 모두 삭제되어버린다. +를 통해 새태그를 옆에 추가해주는것. 
+	
+	// dom 형태로 생성
+	function abc() {
+		var b = document.getElementById("box");
+		//b.innerText = "<input type  = 'text' id = 'mid' name = 'mid'>";
+		
+		if(a < 3){	//최대 3칸까지만 생성 할 수 있게 하는 코드
+		b.innerHTML += "<input type  = 'text' id = 'mid' name = 'mid'>";	
+			}
+		a++;
+		//기존소스가 사라지고 새로운 소스가 생김 따라서 +=를 넣어주어 추가로 연결되어 보이게 해야함.
+		//사용예: 첨부파일, 옵션 선택
+		//b.innerHTML = "홍길동";
+	}
+	
+	//node 형태로 생성 : tag열고 자동으로 닫힘
+	function add() {
+		var k = document.getElementById('box2');
+		var obj = document.createElement("span"); //createElement : 해당 태그를 생성한다는 함수
+		var text = document.createTextNode("연습"); //createTextNode : 문자만 생성할 때 사용하는 함수
+		obj.append(text);
+		k.append(obj);
+		
+		//append : node를 추가한다는 함수, 기존태그가 있을 경우 새로운 태그는 기존태그 아래에 생성 됨(IE에서는 작동하지 않음)
+		
+		//appendChild : IE(internet exploer)에서 사용하는 속성값
+// 		obj.appendChild(text);		-> 과거에 append만 사용하면 익스플로어에서는 작동되지않아서 썼었음
+// 		k.appendChild(obj);
+	}
+	
+	
+	function add2() {
+		var i = document.getElementById("box3");
+		var q = document.createElement("label");
+		var text = document.createTextNode("텍스트노드");
+		q.append(text);
+		i.insertBefore(q,i.firstChild);	//lastChild()면 해당 태그 안에 마지막 태그 생성
+	}
+	//insertBefore : 원하는 위치를 조정하여 생성하는 함수
+	// firstChild : 태그에 가장 위에서 생성
+	// lastChild : 태그에 가장 아래에서 생성
+	
+	
+</script>
+</head>
+<body>
+	<div id="box">
+		<input type="button" value="생성" onclick="abc();">
+	</div>
+<div id = "box2">
+	<input type = "button" value = "생성2" onclick = "add();">
+</div>
+
+<div id = "box3">
+<input type = "button" value = "생성3" onclick = "add2();">
+</div>
+</body>
+</html>

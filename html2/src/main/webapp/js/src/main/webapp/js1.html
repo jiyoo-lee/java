@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE = edge, chrome = 1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript 4일차 submit + return </title>
+<script>
+	
+	
+	function abc() {	//return 함수 
+		if(frm.search.value == ""){
+			alert("검색 할 단어를 입력하세요");
+			return false;	//submit 속성에만 return을 무조건 사용해야 함
+		}
+		else {
+			return;
+			// return true;
+			// frm.submit();
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<form name="frm" id="frm" method = "post" action = "https://naver.com" onsubmit = "return abc();">
+																			<!-- onsubmit : form tag에만 쓰인다-->
+		<input type="text" id="search" name="search"> 
+		<input type="submit" value="search" >
+	</form>
+</body>
+</html>

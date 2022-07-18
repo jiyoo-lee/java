@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE = edge, chrome = 1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS 4일차 코드생성2 </title>
+<script>
+
+	var notice = ["2022년 5월부터 야간 개장오픈!!","한국민속촌 귀굴 5월~11월까지 개장!!","봄엽서 시골 여름 이벤트 행사 7월~9월까지 이벤트!"];
+
+</script>
+<style>
+	.notice{
+		font-size : 13px;
+		font-weight: bold;
+		width : 150px;
+		height: 30px;
+		background-color: black;
+		border-radius: 30px;
+		color : white;
+		line-height: 30px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+
+<input type= "button" value ="생성" onclick ="abc()">
+
+<div id = "box">
+</div>
+<br><br>
+<fieldset id = "board">
+<legend class = "notice">공지사항[notice]</legend>
+<ul id = "notice">
+
+</ul>
+</fieldset>
+
+
+</body>
+<script> //script가 html보다 아래에 있을 경우는 함수로 적용되지않고 즉시 새로고침하는 순간 즉시 실행이 필요할 경우 html아래에 코드를 적음
+		// 이유는 html 모든 태그가 로드 된 후 script가 작동되게 하기 위함이다.
+	
+		
+	var id = document.getElementById("board");
+	var uls = document.createElement("ul");
+	
+	for(var f = 0; f < notice.length; f++){
+		var lis = document.createElement("li")
+		var text = document.createTextNode(notice[f]);
+		lis.append(text);
+		uls.append(lis);
+		id.append(uls);
+	}
+		
+	//선생님 코드
+// 	var ea = notice.length;
+// 	var k = 0;
+// 	var html, text;
+// 	do{
+// 		html = document.createElement("li");
+// 		text = document.createTextNode(notice[k]);
+// 		html.append(text);
+// 		document.getElementById("notice").append(html);
+// 		k++;
+// 	}while(k <ea);
+	
+	
+		
+// 	function abc() {
+		
+// 	var id = document.getElementById("box");
+// 	var o_ul = document.createElement("ul");
+	
+// 	var w = 0;
+// 	while(w <= 10){
+// 		var o_li = document.createElement("li");
+// 		var text = document.createTextNode("연습");
+// 		o_li.append(text);
+// 		o_ul.append(o_li);
+// 		id.append(o_ul);
+// 		w++;
+// 	}
+//}
+	
+</script>
+</html>

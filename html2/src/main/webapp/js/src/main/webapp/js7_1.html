@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>js7과 함께 참고 파라미터 전달(form, location)</title>
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<head>
+<script>
+
+	var url = window.location.search;
+	var addr = url.split("&eee=");
+	var where = addr[1];
+	var addr2 = addr[0].split("?ddd=");
+	var name = addr2[1];
+	
+
+</script>
+</head>
+<body>
+
+이름: <span id = "username"></span> <br>
+국적: <span id = "country"> </span>
+</body>
+
+	<script>
+	
+	document.getElementById("username").innerText = name;
+	document.getElementById("country").innerText = where;
+	
+	</script>
+
+</html>
