@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>두번째 HTML</title>
+</head>
+
+<body>
+
+이름 : <span id = "name"></span> <br>
+나이 : <span id = "age"></span> <br>
+거주지 : <span id = "residence"></span>
+
+<script>
+
+
+	var url = window.location.search;
+	// ?name=gojeasuk3&age=33&residence=seoul
+	
+	var sp = url.substring(1, url.length);
+	console.log(sp);
+	
+	var sp2 = sp.split("&");
+	console.log(sp2);
+	
+	for(var i = 0; i<3; i++){
+		var sp3 = sp2[i].split("=");
+// 		console.log(sp3[0]);
+// 		console.log(sp3[1]);
+		document.getElementById(sp3[0]).append(sp3[1]);
+	}
+
+
+</script>
+
+</body>
+</html>

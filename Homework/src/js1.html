@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>HTML INPUT 값 넘겨보기!</title>
+</head>
+<script>
+
+	function validate() {
+		
+		if(frm.name.value == ""){
+			alert("이름을 입력해주세요.");
+		}
+		else if (frm.age.value == "") {
+			alert("나이를 입력해주세요.");
+		}
+		else if (frm.residence.value == ""){
+			alert("거주지를 선택해주세요.");
+		}
+		else{
+			frm.submit();
+		}
+	}
+
+</script>
+
+<body>
+<form id = "frm" name = "frm" method = "get" action = "./js1_1.html">
+	이름 : <input type = "text" id = "name" name = "name"> <br>
+	나이 : <input type = "text" id = "age" name = "age"> <br>
+	거주지 : 서울<input type = "radio" id = "residence" name = "residence" value="seoul"> 
+		   부산<input type = "radio" id = "residence" name = "residence" value="busan">
+	<input type = "button" value = "전송" onclick = "validate();">
+</form>
+</body>
+</html>
