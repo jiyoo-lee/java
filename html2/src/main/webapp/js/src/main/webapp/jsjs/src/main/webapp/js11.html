@@ -1,0 +1,67 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<title></title>
+<script>
+
+/*대메뉴 링크 페이지 제작 
+ 
+ 해당 배열 값을 확인하여 javascript로 html에 코드가 생성되어 페이지 이동이 되도록 하는 제작 프로그램을 구현하시오.
+ 
+ */
+
+
+   var order = [
+      ["사과", "딸기", "바나나", "키위", "파인애플", "수박", "참외"]
+      ["1800", "5500", "4000", "6000", "12000", "23000", "8000"]
+      ];
+   
+   
+   var url = window.location.search;
+   var b = url.substring(1, url.length);   
+   var a = b.split("&");
+    
+   var aa = [];
+   var bb = [];
+   var c;
+   for(var f=0; f < a.length; f++){
+      aa.push(a[f].charAt(0));
+   	}
+   
+   for(var i = 0; i < order.length; i++){
+	   
+   }
+   
+   /*console.log(a);
+   var w = 0;
+   while(w < order[0].length){
+      if(a[w] == order[0][w]){
+         console.log(order[1][w]);
+      }
+   }*/
+   //var cc = c[0];
+   
+   //console.log(order[0][cc]);
+   //console.log(order[1][cc]);
+   
+   /*function order() {
+      if(frm.aaa.value==""){
+         alert("물품을 선택해주세요.");
+      }else{
+         frm.submit();
+      }
+   }*/
+   
+   
+</script>
+<style>
+</style>
+</head>
+<body>
+   <form name="frm" id="frm" method="get" action="http://192.168.100.216:8080/p/js10.html">
+   <input type="button" value="결제하기" onclick="order();">
+   </form>
+</body>
+</html>
