@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>결제시스템</title>
+<style>
+	.accountList{
+	 display : none;
+	}
+</style>
+<script>
+	function showSelectBar() {
+		accountList.style.display = "block";
+	}
+
+	function complete() {
+		alert("결제가 완료되었습니다.");
+	}
+
+</script>
+</head>
+<body>
+<div>결제하실 금액 : <span id = sum></span></div>
+<div>최종 결제하실 결제방법을 선택해 주시길 바랍니다.</div> <br>
+<input type = "radio" name = "check" onchange = "showSelectBar();"> 무통장입금
+<input type = "radio" name = "check"> 가상계좌
+<input type = "radio" name = "check"> 계좌이체
+<input type = "radio" name = "check" checked = "checked"> 신용카드<br>
+<div id = "accountList" class = "accountList">
+	<select id = "select">
+		<option>계좌를 선택하세요.</option>
+	</select><br>
+	<input type = "text" placeholder = "입금자명을 입력하세요.">
+</div>
+
+<input type = "button" value = "결제완료" onclick = "complete();">
+</body>
+<script>
+
+var url = window.location.search;
+var payment = url.split("?sum=")[1];
+
+document.getElementById("sum").append(payment + "원");
+var accounts = ["하나은행 608-12-553432 예금주명 : 홍길동","SC은행 323-20-227025 예금주명 : 홍길동", "국민은행 64-2342-1134568 예금주명 : 홍길동"];
+
+for(var i = 0; i < accounts.length; i++){
+	document.getElementById("select").innerHTML += "<option>" + accounts[i] + "</options>";
+}
+
+</script>
+</html>

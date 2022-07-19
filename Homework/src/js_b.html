@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>B파트</title>
+<script>
+	var fruitsList = [
+						["사과",1800],
+						["딸기",5500],
+						["바나나",4000],
+						["키위",6000],
+						["파인애플",12000],
+						["수박",23000],
+						["참외",8000]				
+					];
+
+</script>
+</head>
+<body>
+<form name = "frm" id = "frm" method = "get" action = "./js_c.html">
+<div id = "selectedProducts">선택한 상품은 : </div>
+<div id = "price">결제하실 금액은 : </div>
+<br>
+<input type ="button" value = "결제하기" onclick = "payment();">
+</form>
+</body>
+<script>
+		
+		var url = decodeURI(window.location.search);
+		var keyValue = url.substring(1,url.length);
+		var selectedFruits = keyValue.split("&"); 
+		var sum = 0;
+		
+		for(var i = 0; i < selectedFruits.length; i++){
+			var fruit = selectedFruits[i].split("=")[1];
+			for(var j = 0; j < fruitsList.length; j++) {
+					if(fruit == fruitsList[j][0]){
+						sum += fruitsList[j][1];
+						document.getElementById("selectedProducts").append(fruit + " (" + fruitsList[j][1] + ") ");
+					}
+				}
+			}
+		document.getElementById("price").append(sum + "원");
+	
+		function payment() {
+			location.href = './js_c.html?sum='+sum;
+		}
+
+</script>
+</html>

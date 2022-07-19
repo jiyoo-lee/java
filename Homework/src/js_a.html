@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>JavaScript A파트</title>
+<script>
+
+	function sendValue() {
+		var fruitsBoxies = document.getElementsByName('fruits');
+		var count = 0;
+		for(var i = 0; i < fruitsBoxies.length; i++){
+			if(fruitsBoxies[i].checked){
+				count++;
+			}
+		}
+		if(count < 2){
+			alert("과일은 2개이상부터 구입 가능합니다!");
+		}
+		else {
+			frm.submit();
+		}
+	}
+
+</script>
+</head>
+<body>
+
+<div> 장바구니 시스템[ 구입 할 과일을 선택해주세요 ]<br><br>
+
+<form name = "frm" id = "frm" method = "get" action = "./js_b.html">
+	<input type = "checkbox" name = "fruits" value = "사과">사과
+	<input type = "checkbox" name = "fruits" value = "딸기">딸기
+	<input type = "checkbox" name = "fruits" value ="바나나">바나나
+	<input type = "checkbox" name = "fruits" value = "키위">키위
+	<input type = "checkbox" name = "fruits" value = "파인애플">파인애플
+	<input type = "checkbox" name = "fruits" value = "수박">수박
+	<input type = "checkbox" name = "fruits" value = "참외">참외 
+	<br><br>
+	<input type = "button" value = "신청완료" onclick = "sendValue();">
+</form>
+</div>
+
+</body>
+<script>
+
+</script>
+</html>
