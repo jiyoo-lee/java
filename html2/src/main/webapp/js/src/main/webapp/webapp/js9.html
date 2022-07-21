@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>JS 5일차 응용문제</title>
+</head>
+<script>
+
+function abc() {
+	var allagree = document.getElementById("all");
+	var userck;
+	
+	allagree.checked == true? (userck=true) : (userck=false);
+	
+	var w = 1;
+		while(w <= 4){
+			document.getElementById("agree"+w).checked = userck;
+		w++;
+		}
+	}
+
+</script>
+<Style>
+li { list-style: none; padding : 0; margin : 0;}
+
+.outline{
+	text-align: center;
+	border: 2px dotted black;
+	border-radius: 30px;
+	width: 500px;
+	height: auto;
+	background: lightgray;
+}
+
+
+.first{
+	font-size: 13px;
+}
+
+</Style>
+<body>
+
+
+<div class = "outline"><b>[해당 광고 서비스를 선택하세요]</b>
+
+	<form name = "frm" id = "frm">
+		<ul class = "first">
+
+			<li><b>SMS 수신여부:</b> <input type = "radio" id = "agree1" name ="agree1" value ="Y" >동의함 
+									<input type = "radio" id = "agree1" name ="agree1" value ="N" checked = "checked">동의안함</li>
+			<li><b>이메일 수신여부:</b> <input type = "radio" id = "agree2"name ="agree2">동의함 
+									<input type = "radio" id = "agree2"name ="agree2" checked = "checked">동의안함</li>
+			<li><b>이벤트 알림 수신여부:</b> <input type = "radio" id ="agree3"name ="agree3">동의함 
+									<input type = "radio" id = "agree3"name ="agree3" checked = "checked">동의안함</li>
+			<li><b>푸시알림 수신여부:</b> <input type = "radio" id = "agree4"name ="agree4">동의함 
+									<input type = "radio" id = "agree4"name ="agree4" checked = "checked">동의안함</li>
+			</ul>
+		<label>전체서비스에 동의함 <input type = "checkbox" name = "all" id = "all" onclick = "abc();"></label>
+	</form>
+</div>
+
+</body>
+</html>

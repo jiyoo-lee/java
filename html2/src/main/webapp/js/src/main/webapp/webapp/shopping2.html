@@ -1,0 +1,84 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="u-xa-compatible" content="ie=edge, chrome=1">
+<title>JavaScript</title>
+<script src="http://192.168.100.77:8080/js/product_list.js"></script>
+<script>
+   function allcheck2(){
+      if(f.allcheck.checked==true){
+      var w=0;
+      while(w<ea){
+         f.pd.checked=true;
+         w++;      
+      }}
+      else{
+         var w=0;
+         while(w<ea){
+            f.pd.checked=false;
+            w++;      
+      	}
+      }
+   }
+   
+</script>
+</head>
+<body>
+   <form name="f" id="f" method="get" action="">
+      <table border="1" cellspacing="0" cellpadding="0">
+         <thead>
+            <tr>
+               <th><input type="checkbox" id="allcheck" onclick="allcheck2();"></th>
+               <th>상품명</th>
+               <th>가격</th>
+            </tr>
+         </thead>
+         <tbody id="list">
+         <!-- 
+            <tr>
+               <td><input type="checkbox" name="a"></td>
+               <td>상품명</td>
+               <td>가격</td>
+            </tr>
+          -->
+         </tbody>
+      </table>
+      <input type="button" value="구매하기" onclie="method();">
+   </form>
+</body>
+<script>
+   var html = document.getElementById("list");
+   var ea = product["pd_name"].length;   //체크박스(전체체크)에서 사용하려고 저장
+   //console.log(product["pd_name"][2][1]);
+   Object.keys(product["pd_name"]).forEach(function(aa,bb,cc){
+      tr = document.createElement("tr");
+      //console.log(aa);
+      for(var f in product["pd_name"][aa]){
+         td = document.createElement("td");
+         var code;
+         switch(f){
+         case "0":   //상품명
+            code = 2;
+            input = document.createElement("input");
+            input.type="checkbox";
+            input.name="pd";
+            input.value=product["pd_name"][aa][code];
+            td.append(input);
+            break;
+         case "1": //가격
+            code = 0;
+             td.append(product["pd_name"][aa][code]);    
+         break;
+         case "2": //고유값
+            code = 1;
+          td.append(Number(product["pd_name"][aa][code]).toLocaleString());
+            break;
+         }
+         tr.append(td);
+         html.append(tr);
+         //console.log(product["pd_name"][aa][code]);
+         
+      }
+   });
+</script>
+</html>

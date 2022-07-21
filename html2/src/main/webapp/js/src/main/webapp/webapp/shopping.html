@@ -1,0 +1,68 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="u-xa-compatible" content="ie=edge, chrome=1">
+<title>JavaScript</title>
+<script src="http://192.168.100.77:8080/js/product_list.js"></script>
+<style>
+   #th{
+      height:50px;
+   }
+   .thpro{
+      width:200px;
+   }
+   .thpr{
+      width:150px;
+   }
+   
+</style>
+</head>
+
+<body>
+   <table border = "1"; cellpadding ="0"; cellspacing = "0";>
+      <thead>
+         <tr>
+            <th><input type = "checkbox" id = "check">
+            </th>
+            <th class="thpro">상품명</th>
+            <th class="thpr">가격</th>
+         </tr>
+      </thead>
+   <tbody id = "tbody">
+    
+     
+   </tbody>
+   
+   </table>
+   <input type="button" value="구매하기">
+</body>
+   
+<script>
+   var html = document.getElementById("tbody");
+   console.log(product["pd_name"]);
+   var box, tr, th;
+   
+   for(var f in product["pd_name"]){
+      tr = document.createElement("tr");
+            
+         for(var i in product["pd_name"][f]){
+            th = document.createElement("th");
+            
+            if( i == 0){
+	            box = document.createElement("input");
+	            box.setAttribute('type', 'checkbox');
+	            tr.append(box);
+            }
+            
+            else if(i == 2){
+            	break;
+            }
+            th.append(product["pd_name"][f][i]);
+            
+            tr.append(th);
+         }
+      html.append(tr);
+   }
+   
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상품 페이지 구현</title>
+<script src = "http://192.168.100.77:8080/js/product.js">
+</script>
+<style>
+li{list-style: none; 
+ float: left;
+ border: 1px solid black;
+ width: 160px;
+ height: 700;
+ margin-left: 30px;
+ display: block;
+ font-size: 13px;
+ }
+ 
+
+/* 	.product_div{ */
+/* 		border: 1px solid black; */
+/* 		width: 500px; */
+/* 		height: 180px; */
+/* 	} */
+	
+</style>
+</head>
+<body>
+ <div class = "product_div">
+ 	<ul id = "ul" class ="ulclass">
+<!--  	<li><img src = "./product/product0.jpg">운동화<br>47000원</li> -->
+ 	
+ 	</ul>
+ </div>
+
+</body>
+<script>
+	
+	console.log(product);
+	var html = document.getElementById("ul");
+	var li;
+	var img, pd, money;
+	
+	product.img.forEach(function (aa,bb,cc) {
+		
+		li = document.createElement("li");
+		img = document.createElement("img");
+		img.setAttribute('id',"liid");
+		img.setAttribute('src',product.img[bb]);
+		
+		document.body.appendChild(li);
+		li.append(img);
+				
+		li.append(product.pd[bb]);
+		var price = Number(product.money[bb]).toLocaleString('en');
+		li.append(price +"원");
+	});
+		
+
+</script>
+</html>

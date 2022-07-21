@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>시험 연습 응용문제</title>
+<script src = "http://192.168.100.77:8080/js/user.js">
+//변수 값은 person
+</script>
+<style>
+body{ margin : 0px; padding: 0px;}
+li { list-style: none; }
+
+	.ulclass{
+		border: 1px solid black;
+		width: 300px;
+		height: 500px;
+	}
+
+	.user{
+		float: left;
+		margin-left: 10px;
+		width: 100px;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+</style>
+</head>
+<body>
+<table border = "1"; cellpadding ="0"; cellspacing = "0";>
+	<thead>
+		<tr>
+			<th>회원명</th>
+			<th>회원레벨</th>
+			<th>회원나이</th>
+		</tr>
+	</thead>
+<tbody id = "tbody">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</tbody>
+
+</table>
+</body>
+<script>
+
+
+//console.log(person.member_list);
+
+	var html = document.getElementById("tbody");
+	//console.log(person["member_list"][0]["name"]);
+	var td, tr;
+	
+	for(var f in person["member_list"]){
+		//console.log(f);
+		tr = document.createElement("tr");
+	
+		for(var i in person["member_list"][f]){ //3
+			
+			td = document.createElement("td");
+			//console.log(i);
+			var code;
+			switch(i){
+			
+			case "name" :
+				code = i;
+				
+				break;
+				
+			case "age" :
+				code = "level";
+				
+				break;
+				
+			case "level" :
+				code = "age";
+				
+				break;
+			}
+			//console.log(person["member_list"][f][code]);
+			td.append(person["member_list"][f][code]);
+			tr.append(td);
+		}
+		html.append(tr);
+	}
+	
+
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv ="X-UA-compatible" content = "IE = edge, chrome = 1">
+<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+<title>Javascript 5일차 all checkbox 기능 (약관에 많이 쓰임)</title>
+<script>
+
+	function abc() {
+		
+		var me = document.getElementById("all");
+		var userck;
+		
+		//조건문 형태
+		/*
+		if(me.checked == true){
+			userck = true;
+		}
+		else {userck = false;}*/
+		
+		//삼항연산자 
+		//me.checked == true? (userck=true) : (userck=false);
+		
+		//하위 오브젝트에 대한 ID값으로 모두 true 혹은 false로 적용
+// 		var w = 1;
+// 		while(w <= 5){
+// 			document.getElementById("ct"+w).checked = userck;
+// 		w++;
+// 		}	
+			
+			
+// 		var w = 0;
+// 		while(w < 5){
+// 			frm.ct[w].checked = userck; //name 배열식
+// 			w++;
+// 		}	
+		
+// 		/* 부록 */
+// 		var ea = frm.ct.length;	//name으로 가져오는 형태 (name이 모두 같은 경우 )
+// 		console.log(ea);
+		
+		//name이 다 다를경우 (우선순위 그룹으로 빈태그를 묶어야함)
+		//해당 부모태그 기준으로 하위태그를 말함
+		// 단, TEXT(코드상 ENTER를 적용, or 실제 문자가 적용되어 있을 경우에 text라는 단어가 뜨게 됨)
+		
+		//중요 chilNodes는 해당 하위태그에 br을 적용한 상황일 경우 추가 작업으로 적용하는 범위가 커지므로 사용하지않음.
+		// 적용예시 : <li> <input type = "checkbox" name = "ck1" id = "ck1"> no1 </li> 
+		
+		var node = document.getElementById("cts").children;;
+		var w = 0;
+		var ea2 = 0;
+		while(w < node.length){
+			if(node[w].nodeName == "INPUT") {
+				ea2++;
+			}
+			w++;
+		}
+		console.log(ea2);
+	}
+
+</script>
+</head>
+<body>
+<form name = "frm" id = "frm">
+
+	<label><input type = "checkbox" name = "all" id = "all" onclick = "abc();">전체선택</label><br>
+	<span id = "cts">
+	<input type = "checkbox" name = "ct" id ="ct1">1
+	<input type = "checkbox" name = "ct" id ="ct2">2
+	<input type = "checkbox" name = "ct" id ="ct3">3
+	<input type = "checkbox" name = "ct" id ="ct4">4
+	<input type = "checkbox" name = "ct" id ="ct5">5
+	</span>
+</form>
+
+</body>
+</html>
