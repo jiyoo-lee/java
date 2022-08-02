@@ -1,0 +1,9 @@
+
+[java]
+1.Thread.sleep(1000) : 시간 지연 함수
+2.scheduledExecuteService + new Task()
+3.TimeUnit.
+
+[JavaScript / JQuery]
+setTimeout : 1회성
+setInterval : 반복
